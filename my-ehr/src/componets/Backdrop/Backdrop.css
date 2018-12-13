@@ -1,0 +1,16 @@
+.backdrop {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+@media screen and (min-width: 600px) {
+    .backdrop {
+        display: none;
+    }
+   
+}
