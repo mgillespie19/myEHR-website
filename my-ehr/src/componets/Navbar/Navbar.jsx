@@ -8,10 +8,18 @@ class Navbar extends Component {
         super(props);
         this.state = {
             toggleSideDrawer: props.toggleSideDrawer,
-            showSideDrawer: props.showSideDrawer,
+            showSideDrawer: false,
         }
     }
+    
+    componentWillReceiveProps(nextProps){
+        this.setState({
+            showSideDrawer: nextProps.showSideDrawer,
+        });
+    }
     render(){
+        console.log("Navbar: "+this.state.showSideDrawer);
+
         return(
             <header className="navbar">
                 <nav className="navbar-nav">

@@ -5,6 +5,8 @@ import './HamburgerMenu.css';
 
 const hamburgerMenu = props => {
     let hamburgerMenuClasses = "hamburgerMenu";
+    console.log("hamburger: "+props.showSideDrawer);
+    
     if(props.showSideDrawer){
         hamburgerMenuClasses = "hamburgerMenu close";
     }
