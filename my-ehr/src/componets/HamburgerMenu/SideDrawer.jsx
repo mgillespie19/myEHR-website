@@ -9,10 +9,11 @@ const sideDrawer = props => {
     return(<nav className={drawerClasses}>
         <ul>
             <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
             <li><a href="/">Patient</a></li>
             <li><a href="/">Practices</a></li>
-            <li><a href="/">About</a></li>
             <li><a href="/">Account</a></li>
+            <div className="side-drawer-spacing"/>
         </ul>
     </nav>);
 }

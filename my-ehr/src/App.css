@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'geo_sans_light';
+    src: local('geo_sans_light'), url(./assets/fonts/geo_sans_light/GeosansLight.ttf) format('ttf');
+}
+
 .app{
+    font-family: 'geo_sans_light';
     height: 100%;
 }

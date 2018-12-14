@@ -1,0 +1,32 @@
+.about {
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    width: 90%;
+    padding: 20px;
+}
+
+.about p {
+    font-size: 1.3rem;
+}
+
+.about img {
+    min-width: none;
+    width: auto;
+    height: 30vw;
+    padding: 20px;
+    margin-top: 32px;
+}
+
+.img-row {
+    flex-direction: row;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-row img {
+    display: inline-flex;
+    margin-top: 0px;
+}

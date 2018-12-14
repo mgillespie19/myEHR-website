@@ -5,6 +5,7 @@
     width: 100%;
     background-color: rgba(106,0,148);
     height: 64px;
+    z-index: 100;
 }
 
 .navbar-nav {
@@ -34,6 +35,7 @@
 .navbar-items a {
     color: white;
     text-decoration: none;
+    font-size: 1.3em;
 }
 .navbar-items a:hover, .navbar-items a:active {
     color: orange;
@@ -43,7 +45,7 @@
 .logo a {
     color: white;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin-left: 0.5rem;
 }
 
