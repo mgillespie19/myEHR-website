@@ -6,12 +6,12 @@ import Home from './componets/pages/Home/Home';
 
 
 class App extends Component {
-  
+
   render() {
     return (
       <Root>
         <Home/>
-      </Root>  
+      </Root>
     );
   }
 }

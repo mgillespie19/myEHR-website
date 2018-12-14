@@ -11,7 +11,7 @@ const sideDrawer = props => {
             <li><a href="/">Home</a></li>
             <li><a href="/">About</a></li>
             <li><a href="/">Patient</a></li>
-            <li><a href="/">Practices</a></li>
+            <li><a href="/">Provider</a></li>
             <li><a href="/">Account</a></li>
             <div className="side-drawer-spacing"/>
         </ul>

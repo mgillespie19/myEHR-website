@@ -33,7 +33,7 @@ class Navbar extends Component {
                             <li><a href="/">Home</a></li>
                             <li><a href="/">About</a></li>
                             <li><a href="/">Patient</a></li>
-                            <li><a href="/">Practices</a></li>
+                            <li><a href="/">Provider</a></li>
                             <li><a href="/">Account</a></li>
                         </ul>
                     </div>
