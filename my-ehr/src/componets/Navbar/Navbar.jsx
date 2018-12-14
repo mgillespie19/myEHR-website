@@ -30,11 +30,26 @@ class Navbar extends Component {
                     <div className="nav-spacing"/>
                     <div className="navbar-items">
                         <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/">About</a></li>
-                            <li><a href="/">Patient</a></li>
-                            <li><a href="/">Provider</a></li>
-                            <li><a href="/">Account</a></li>
+                            <li>
+                              <a href="/"> Home
+                              </a>
+                            </li>
+                            <li>
+                              <button type="button" id="newBtn" className="btn btn-success"  onClick={this.handleNewBtnPress}> About
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" id="newBtn" className="btn btn-success"> Patient
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" id="newBtn" className="btn btn-success"> Provider
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" id="newBtn" className="btn btn-success"> Account
+                              </button>
+                            </li>
                         </ul>
                     </div>
                 </nav>
