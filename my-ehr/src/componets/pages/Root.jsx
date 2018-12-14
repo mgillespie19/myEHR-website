@@ -12,6 +12,7 @@ class Root extends Component {
 
   state = {
     sideDrawerOpen: false
+
   }
 
   toggleSideDrawer = () => {
@@ -25,6 +26,9 @@ class Root extends Component {
    this.setState({sideDrawerOpen: false});
   }
 
+  scrollToAbout = () => {
+    console.log("scroll to about");
+  }
 
   render() {
 
@@ -36,7 +40,7 @@ class Root extends Component {
 
     return (
       <div className="app">
-        <Navbar toggleSideDrawer={this.toggleSideDrawer} showSideDrawer={this.state.sideDrawerOpen}/>
+        <Navbar toggleSideDrawer={this.toggleSideDrawer} scrollToAbout={this.scrollToAbout} showSideDrawer={this.state.sideDrawerOpen}/>
         <SideDrawer showSideDrawer={this.state.sideDrawerOpen}/>
         {backdrop}
         <div className="container">

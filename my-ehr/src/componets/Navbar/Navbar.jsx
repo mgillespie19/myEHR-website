@@ -9,6 +9,7 @@ class Navbar extends Component {
         this.state = {
             toggleSideDrawer: props.toggleSideDrawer,
             showSideDrawer: false,
+            scrollToAbout: props.scrollToAbout,
         }
     }
 
@@ -35,7 +36,7 @@ class Navbar extends Component {
                               </a>
                             </li>
                             <li>
-                              <button type="button" id="newBtn" className="btn btn-success"  onClick={this.handleNewBtnPress}> About
+                              <button type="button" id="newBtn" className="btn btn-success"  onClick={ this.state.scrollToAbout }> About
                               </button>
                             </li>
                             <li>
