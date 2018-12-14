@@ -30,6 +30,7 @@ class Navbar extends Component {
                     <div className="nav-spacing"/>
                     <div className="navbar-items">
                         <ul>
+                            <li><a href="/">Home</a></li>
                             <li><a href="/">About</a></li>
                             <li><a href="/">Patient</a></li>
                             <li><a href="/">Practices</a></li>
