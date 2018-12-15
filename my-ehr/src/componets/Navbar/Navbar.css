@@ -42,6 +42,7 @@
     color: orange;
     text-decoration: none;
     outline-style: none;
+    cursor: pointer;
 }
 
 .navbar-items button:focus, .navbar-items button:focus {

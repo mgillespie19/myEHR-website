@@ -31,12 +31,10 @@ class Navbar extends Component {
                     <div className="nav-spacing"/>
                     <div className="navbar-items">
                         <ul>
+                            <li><a href="/"> Home</a></li>
                             <li>
-                              <a href="/"> Home
-                              </a>
-                            </li>
-                            <li>
-                              <button type="button" id="newBtn" className="btn btn-success"  onClick={ this.state.scrollToAbout }> About
+                              <button type="button" id="newBtn" className="btn btn-success"  onClick={ this.state.scrollToAbout }> 
+                              About
                               </button>
                             </li>
                             <li>

@@ -23,16 +23,21 @@
 
 .side-drawer li {
     margin: 0.5rem 0;
+    color: rgba(106,0,148);
+    font-size: 1.3rem;
 }
 
 .side-drawer a{
-    color: rgba(106,0,148);
     text-decoration: none;
-    font-size: 1.3rem;
 }
 
 .side-drawer a:hover, .side-drawer a:active {
     color: orange;
+}
+
+.side-drawer li:hover, .side-drawer li:active {
+    color: orange;
+    cursor: pointer;
 }
 
 .open {
