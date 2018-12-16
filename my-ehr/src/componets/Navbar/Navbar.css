@@ -34,7 +34,7 @@
     padding: 0 0.5rem;
 }
 
- .navbar-items button, .navbar-items a {
+ .navbar-items a {
    background-color: rgba(106,0,148);
    color: white;
    text-decoration: none;
@@ -43,16 +43,11 @@
    font-family: geo_sans_light;
  }
 
-.navbar-items button:hover, .navbar-items a:hover {
+.navbar-items a:hover {
     color: orange;
     text-decoration: none;
     outline-style: none;
     cursor: pointer;
-}
-
-.navbar-items button:focus, .navbar-items button:focus {
-  text-decoration: none;
-  outline-style: none;
 }
 
 .logo a {

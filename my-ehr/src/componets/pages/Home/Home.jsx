@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import './Home.css';
-import About from '../About/About';
 import {Animated} from "react-animated-css";
+import About from '../About/About';
 
 
 class Home extends Component {
-    state = {
-        showMainContent: false
+    constructor(props){
+        super(props);
+        this.state = {
+            showMainContent: false
+        }
+        this.aboutRef = props.aboutRef;
     }
+    
     componentDidMount(){
         this.setState(state => ({
             showMainContent: true
@@ -27,6 +32,7 @@ class Home extends Component {
                         </Animated>
                     </div>
                 </div>
+                <About aboutRef={this.aboutRef}/>
             </div>
         );
     }

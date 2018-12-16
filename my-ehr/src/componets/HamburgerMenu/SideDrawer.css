@@ -35,10 +35,7 @@
     color: orange;
 }
 
-.side-drawer li:hover, .side-drawer li:active {
-    color: orange;
-    cursor: pointer;
-}
+
 
 .open {
     transform: translateX(0%);
