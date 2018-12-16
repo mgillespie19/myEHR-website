@@ -9,7 +9,7 @@
 
 .about p {
     font-size: 1.3rem;
-    margin: 0 auto;
+    margin: 10 auto;
 }
 
 .about img {
@@ -33,12 +33,30 @@
 }
 
 .app-store {
-    width: 50%;
-    margin: 0 auto;
+    margin: 0;
+    flex-direction: row;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .app-store img{
-    height: 50px;
-    margin: 0 auto;
-    padding: 10px;
+    height: auto;
+    width: 150px;
+    margin: 0;
+    padding: 0px;
+    margin-right: 20px;
+}
+
+
+.process {
+    margin: 0;
+    width: 90%;
+    padding: 20px;
+}
+
+.process img {
+    margin: 0px;
+    width: 100%;
+    height: auto;
 }

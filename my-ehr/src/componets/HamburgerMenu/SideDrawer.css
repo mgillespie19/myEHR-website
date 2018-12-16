@@ -28,11 +28,13 @@
 }
 
 .side-drawer a{
+    color: rgba(106,0,148);
     text-decoration: none;
 }
 
 .side-drawer a:hover, .side-drawer a:active {
     color: orange;
+    text-decoration: none;
 }
 
 

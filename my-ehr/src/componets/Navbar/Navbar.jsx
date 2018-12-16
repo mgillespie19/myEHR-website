@@ -30,7 +30,7 @@ class Navbar extends Component {
                     <div className="navbar-items">
                         <ul>
                             <li><a href="/">Home</a></li>
-                            <li onClick={this.state.scrollToAbout}><a href="/">About</a></li>
+                            <li onClick={this.state.scrollToAbout}><a href="/about">About</a></li>
                             <li><a href="/Patient">Patient</a></li>
                             <li><a href="/Provider">Provider</a></li>
                             <li><a href="/Account">Account</a></li>

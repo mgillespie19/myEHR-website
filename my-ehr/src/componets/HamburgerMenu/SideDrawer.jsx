@@ -13,10 +13,10 @@ const sideDrawer = props => {
     return(<nav className={drawerClasses}>
         <ul>
             <li><a href="/">Home</a></li>
-            <li onClick={props.scrollToAbout}><a href="/">About</a></li>
-            <li><a href="/Patient">Patient</a></li>
-            <li><a href="/Provider">Provider</a></li>
-            <li><a href="/Account">Account</a></li>
+            <li onClick={props.scrollToAbout}><a href="/about">About</a></li>
+            <li><a href="/patient">Patient</a></li>
+            <li><a href="/provider">Provider</a></li>
+            <li><a href="/account">Account</a></li>
             <div className="side-drawer-spacing"/>
         </ul>
     </nav>);
