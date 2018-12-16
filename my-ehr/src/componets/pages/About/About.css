@@ -9,6 +9,7 @@
 
 .about p {
     font-size: 1.3rem;
+    margin: 0 auto;
 }
 
 .about img {
@@ -29,4 +30,15 @@
 .img-row img {
     display: inline-flex;
     margin-top: 0px;
+}
+
+.app-store {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.app-store img{
+    height: 50px;
+    margin: 0 auto;
+    padding: 10px;
 }

@@ -3,11 +3,14 @@ import './About.css';
 
 
 class About extends Component {
-    
+    constructor(props){
+        super(props);
+        this.aboutRef = props.aboutRef
+    }
     render() {
         return(
             <div className="about">
-                <h1>About</h1>
+                <h1 ref={this.aboutRef}>About</h1>
                 <p>Our goal is to improve patient outcome within the public health sector by democratizing health records with a secure system for everyone. Electronic Health Records (EHR) are a necessity for securely giving patients the care they need, and thus doctors the information they require to do so, but there are currently around 950 vendors providing over 1,700 unique certified EHR products. Because of the siloed nature of these record systems, the process of transferring records involves requesting an EHR, having to fax the EHR to the healthcare provider, manually print it, verify, fax to the requestor, and then scan (or transcribe) the information into a local EHR. This system is highly inefficient and can lead to records being incorrectly transferred. We hope to significantly minimize inefficiency and possibility of data corruption by offering a new system that uses blockchain to securely store and share patient health records. </p>
                 <div className="img-row">
                     <img alt="Network" src={require("../../../assets/images/network.png")}/>
@@ -19,6 +22,13 @@ class About extends Component {
                     <img alt="App Screen Shot" src={require("../../../assets/images/appLoginScreenshot.png")}/>
                     <img alt="App Screen Shot" src={require("../../../assets/images/appRecordsScreenshot.png")}/>
                 </div>
+                <p>Currently the app is avaiable on the Apple app store and will be coming to Google Play store soon.</p>
+                <div className="app-store">
+                    <a href="https://www.apple.com/ios/app-store/">
+                        <img alt="Download on the Appstore" src={require("../../../assets/icons/download_on_app_store.png")}/>
+                    </a>
+                </div>
+
             </div>
         );
     }

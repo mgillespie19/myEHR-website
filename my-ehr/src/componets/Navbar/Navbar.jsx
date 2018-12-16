@@ -19,8 +19,6 @@ class Navbar extends Component {
         });
     }
     render(){
-        console.log("Navbar: "+this.state.showSideDrawer);
-
         return(
             <header className="navbar">
                 <nav className="navbar-nav">
@@ -31,24 +29,15 @@ class Navbar extends Component {
                     <div className="nav-spacing"/>
                     <div className="navbar-items">
                         <ul>
-                            <li><a href="/"> Home</a></li>
+                            <li><a href="/">Home</a></li>
                             <li>
-                              <button type="button" id="newBtn" className="btn btn-success"  onClick={ this.state.scrollToAbout }> 
+                              <button type="button" id="newBtn" className="btn btn-success"  onClick={this.state.scrollToAbout}> 
                               About
                               </button>
                             </li>
-                            <li>
-                              <button type="button" id="newBtn" className="btn btn-success"> Patient
-                              </button>
-                            </li>
-                            <li>
-                              <button type="button" id="newBtn" className="btn btn-success"> Provider
-                              </button>
-                            </li>
-                            <li>
-                              <button type="button" id="newBtn" className="btn btn-success"> Account
-                              </button>
-                            </li>
+                            <li><a href="/">Patient</a></li>
+                            <li><a href="/">Provider</a></li>
+                            <li><a href="/">Account</a></li>
                         </ul>
                     </div>
                 </nav>

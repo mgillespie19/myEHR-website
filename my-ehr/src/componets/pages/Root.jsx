@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import scrollToComponent from 'react-scroll-to-component';
 
 import './Root.css';
 import Navbar from '../Navbar/Navbar';
@@ -9,25 +10,32 @@ import Footer from '../Footer/Footer';
 
 
 class Root extends Component {
-
-  state = {
-    sideDrawerOpen: false
-
+  constructor(props){
+    super(props)
+    this.state = {
+      sideDrawerOpen: false,
+    }
+    this.aboutRef = this.props.aboutRef
   }
 
   toggleSideDrawer = () => {
     this.setState((prevState)=> {
-      console.log("Root: "+!prevState.sideDrawerOpen)
       return {sideDrawerOpen: !prevState.sideDrawerOpen};
     });
   }
 
   closeSideDrawer = () => {
-   this.setState({sideDrawerOpen: false});
+    this.setState({sideDrawerOpen: false});
   }
 
   scrollToAbout = () => {
-    console.log("scroll to about");
+    this.closeSideDrawer()
+    
+    scrollToComponent(this.aboutRef.current, {
+      align: 'top',
+      offset: -84,
+      duration: 1000,
+    });
   }
 
   render() {
@@ -41,12 +49,12 @@ class Root extends Component {
     return (
       <div className="app">
         <Navbar toggleSideDrawer={this.toggleSideDrawer} scrollToAbout={this.scrollToAbout} showSideDrawer={this.state.sideDrawerOpen}/>
-        <SideDrawer showSideDrawer={this.state.sideDrawerOpen}/>
+        <SideDrawer showSideDrawer={this.state.sideDrawerOpen} scrollToAbout={this.scrollToAbout} toggleSideDrawer={this.toggleSideDrawer}/>
         {backdrop}
         <div className="container">
             {this.props.children}
         </div>
-        <Footer />
+        <Footer/>
       </div>
     );
   }

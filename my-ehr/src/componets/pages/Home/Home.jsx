@@ -9,11 +9,9 @@ class Home extends Component {
         showMainContent: false
     }
     componentDidMount(){
-        console.log(this.state.showMainContent)
         this.setState(state => ({
             showMainContent: true
         }));
-        console.log(this.state.showMainContent)
     }
 
     render() {
@@ -29,7 +27,6 @@ class Home extends Component {
                         </Animated>
                     </div>
                 </div>
-                <About />
             </div>
         );
     }
