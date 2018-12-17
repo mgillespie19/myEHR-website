@@ -30,7 +30,7 @@ class Root extends Component {
 
   scrollToAbout = () => {
     this.closeSideDrawer()
-    
+
     scrollToComponent(this.aboutRef.current, {
       align: 'top',
       offset: -84,
@@ -48,7 +48,7 @@ class Root extends Component {
 
     return (
       <div className="app">
-        <Navbar toggleSideDrawer={this.toggleSideDrawer} scrollToAbout={this.scrollToAbout} showSideDrawer={this.state.sideDrawerOpen}/>
+        <Navbar toggleSideDrawer={this.toggleSideDrawer} scrollToAbout={this.scrollToAbou} showSideDrawer={this.state.sideDrawerOpen}/>
         <SideDrawer showSideDrawer={this.state.sideDrawerOpen} scrollToAbout={this.scrollToAbout} toggleSideDrawer={this.toggleSideDrawer}/>
         {backdrop}
         <div className="container">
