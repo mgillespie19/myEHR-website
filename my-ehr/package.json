@@ -1,7 +1,7 @@
 {
   "name": "my-ehr",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "homepage": "https://mgillespie19.github.io/myEHR-website/",
   "dependencies": {
     "firebase": "^5.7.0",
