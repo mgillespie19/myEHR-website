@@ -6,21 +6,40 @@ import Account from './componets/pages/Account/Account';
 import Patient from './componets/pages/Patient/Patient';
 import Provider from './componets/pages/Provider/Provider';
 import About from './componets/pages/About/About';
+import PatientProfile from './componets/pages/Profile/PatientProfile/PatientProfile';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
+import fire from './config/fire';
 
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.aboutRef = React.createRef();
+    this.state = {
+      user: {},
+    }
+  }
+
+  componentDidMount(){
+    this.authListener()
+  }
+
+  authListener(){
+    fire.auth().onAuthStateChanged((user) => {
+      if(user){
+        this.setState({ user });
+      } else {
+        this.setState({ user: null });
+      }
+    });
   }
  
   render() {
     return (
-      <BrowserRouter>
-        <Root aboutRef={this.aboutRef}>
+      <Root aboutRef={this.aboutRef}>
+      {/* {this.state.user ? (<PatientProfile/>) : ( */}
+        <BrowserRouter>
           <Switch>
             <Route path="/" exact component={Home}/>
             <Route path="/about" exact component={About}/>
@@ -28,8 +47,9 @@ class App extends Component {
             <Route path="/provider" exact component={Provider}/>
             <Route path="/account" exact component={Account}/>
           </Switch>
-        </Root>
-      </BrowserRouter>
+        </BrowserRouter>
+      {/* )} */}
+      </Root>
     );
   }
 }
