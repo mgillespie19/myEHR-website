@@ -42,10 +42,10 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route path={process.env.PUBLIC_URL + '/'} exact component={Home}/>
-            <Route path={process.env.PUBLIC_URL + '/about'} exact component={About}/>
-            <Route path={process.env.PUBLIC_URL + '/patient'} exact component={Patient}/>
-            <Route path={process.env.PUBLIC_URL + '/provider'} exact component={Provider}/>
-            <Route path={process.env.PUBLIC_URL + '/account'} exact component={Account}/>
+            <Route path={process.env.PUBLIC_URL + '/About'} exact component={About}/>
+            <Route path={process.env.PUBLIC_URL + '/Patient'} exact component={Patient}/>
+            <Route path={process.env.PUBLIC_URL + '/Provider'} exact component={Provider}/>
+            <Route path={process.env.PUBLIC_URL + '/Account'} exact component={Account}/>
           </Switch>
         </BrowserRouter>
       {/* )} */}
