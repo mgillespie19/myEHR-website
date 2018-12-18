@@ -81,18 +81,17 @@ class App extends Component {
       <Root aboutRef={this.aboutRef}>
         <BrowserRouter>
           <Switch>
-            <Route path="/" exact render={() => <Home/>}/>
-            <Route path="/about" exact render={() => <About/>}/>
-            <Route path="/patient" exact render={() => <Patient/>}/>
-            <Route path="/provider" exact render={() => <Provider/>}/>
-            <Route path="/account" exact render={() => <AccountDirectory/>}/>
-            <Route path="/account/patient" exact render={() => <PatientLogin/>}/>
-            <Route path="/account/provider" exact render={() => <ProviderLogin/>}/>
-            <Route path="/account/patient/create" exact render={() => <PatientCreateAccount/>}/>
-            <Route path="/account/provider/create" exact render={() => <ProviderCreateAccount/>}/>
-            <PrivateRoute path="/account/patient/profile" render={() => <PatientProfile/>}/>
-            <PrivateRoute path="/account/provider/portal" render={() => <ProviderPortal/>}/>
-
+            <Route path={process.env.PUBLIC_URL + '/'} exact render={() => <Home/>}/>
+            <Route path={process.env.PUBLIC_URL + '/about'} exact render={() => <About/>}/>
+            <Route path={process.env.PUBLIC_URL + "/patient"} exact render={() => <Patient/>}/>
+            <Route path={process.env.PUBLIC_URL + "/provider"} exact render={() => <Provider/>}/>
+            <Route path={process.env.PUBLIC_URL + "/account"} exact render={() => <AccountDirectory/>}/>
+            <Route path={process.env.PUBLIC_URL + "/account/patient"} exact render={() => <PatientLogin/>}/>
+            <Route path={process.env.PUBLIC_URL + "/account/provider"} exact render={() => <ProviderLogin/>}/>
+            <Route path={process.env.PUBLIC_URL + "/account/patient/create"} exact render={() => <PatientCreateAccount/>}/>
+            <Route path={process.env.PUBLIC_URL + "/account/provider/create"} exact render={() => <ProviderCreateAccount/>}/>
+            <PrivateRoute path={process.env.PUBLIC_URL + "/account/patient/profile"} render={() => <PatientProfile/>}/>
+            <PrivateRoute path={process.env.PUBLIC_URL + "/account/provider/portal"} render={() => <ProviderPortal/>}/>
 
           </Switch>
         </BrowserRouter>
