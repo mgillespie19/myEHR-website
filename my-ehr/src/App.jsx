@@ -79,7 +79,7 @@ class App extends Component {
   render() {
     return (
       <Root aboutRef={this.aboutRef}>
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Switch>
             <Route path={process.env.PUBLIC_URL + '/'} exact render={() => <Home/>}/>
             <Route path={process.env.PUBLIC_URL + '/about'} exact render={() => <About/>}/>
@@ -92,7 +92,6 @@ class App extends Component {
             <Route path={process.env.PUBLIC_URL + "/account/provider/create"} exact render={() => <ProviderCreateAccount/>}/>
             <PrivateRoute path={process.env.PUBLIC_URL + "/account/patient/profile"} render={() => <PatientProfile/>}/>
             <PrivateRoute path={process.env.PUBLIC_URL + "/account/provider/portal"} render={() => <ProviderPortal/>}/>
-
 
           </Switch>
         </BrowserRouter>
