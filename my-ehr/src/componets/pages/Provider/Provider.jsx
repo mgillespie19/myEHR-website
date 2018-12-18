@@ -3,16 +3,16 @@ import './Provider.css';
 
 
 class Provider extends Component {
-   
+
     render() {
         return(
             <div className="container">
                 <div className="provider">
-                    <h1>Provider Portal Comming Soon...</h1>
+                    <h1>Provider Portal Coming Soon...</h1>
                     <img alt="Hospital"/>
                     <p>The provider portal is currently under development still, and is not ready for deployment.</p>
                 </div>
-            </div> 
+            </div>
         );
     }
 }
