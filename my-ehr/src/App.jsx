@@ -79,7 +79,7 @@ class App extends Component {
   render() {
     return (
       <Root aboutRef={this.aboutRef}>
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <BrowserRouter>
           <Switch>
             <Route path={process.env.PUBLIC_URL + '/'} exact render={() => <Home/>}/>
             <Route path={process.env.PUBLIC_URL + '/about'} exact render={() => <About/>}/>
