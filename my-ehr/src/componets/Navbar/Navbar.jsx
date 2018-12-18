@@ -30,10 +30,10 @@ class Navbar extends Component {
                     <div className="navbar-items">
                         <ul>
                             <li><a href={process.env.PUBLIC_URL + '/'}> Home </a></li>
-                            <li onClick={this.state.scrollToAbout}><a href={process.env.PUBLIC_URL + '/about'} >About</a></li>
-                            <li><a href={process.env.PUBLIC_URL + '/patient'} >Patient</a></li>
-                            <li><a href={process.env.PUBLIC_URL + '/provider'} >Provider</a></li>
-                            <li><a href={process.env.PUBLIC_URL + '/account'} >Account</a></li>
+                            <li onClick={this.state.scrollToAbout}><a href={process.env.PUBLIC_URL + '/about/'} >About</a></li>
+                            <li><a href={process.env.PUBLIC_URL + '/patient/'} >Patient</a></li>
+                            <li><a href={process.env.PUBLIC_URL + '/provider/'} >Provider</a></li>
+                            <li><a href={process.env.PUBLIC_URL + '/account/'} >Account</a></li>
                         </ul>
                     </div>
                 </nav>
