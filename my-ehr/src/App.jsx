@@ -20,7 +20,7 @@ const fireAuth = {
   isAuthenticated: false,
   authenticate(cb) {
     this.isAuthenticated = true;
-    setTimeout(cb, 10000); 
+    setTimeout(cb, 10000);
   },
   signout(cb) {
     this.isAuthenticated = false;
@@ -74,7 +74,7 @@ class App extends Component {
     });
   }
 
-  
+
 
   render() {
     return (

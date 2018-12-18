@@ -12,3 +12,14 @@
     width: 90%;
     padding: 20px;
 }
+
+#house {
+  width:30%;
+  margin-bottom: 2%;
+  margin-left: 0%;
+  float: left;
+}
+
+#hospital {
+  width:20%;
+}
