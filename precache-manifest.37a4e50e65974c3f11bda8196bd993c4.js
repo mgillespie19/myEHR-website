@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/myEHR-website/static/media/appLoginScreenshot.0eb778eb.png"
   },
   {
-    "revision": "df5e8ddc0cd382dd04b8",
+    "revision": "400782c9b65e7e4c57aa",
     "url": "/myEHR-website/static/css/main.3c91f6ee.chunk.css"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/myEHR-website/static/media/blockchain_process.acc78cc8.png"
   },
   {
-    "revision": "df5e8ddc0cd382dd04b8",
-    "url": "/myEHR-website/static/js/main.df5e8ddc.chunk.js"
+    "revision": "400782c9b65e7e4c57aa",
+    "url": "/myEHR-website/static/js/main.400782c9.chunk.js"
   },
   {
     "revision": "c254f7f07c5f5bdc2a9cd08478aa9ba4",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/myEHR-website/static/media/hospital.10ebfeba.png"
   },
   {
-    "revision": "58f301f559cfa914e137d5e8bbd455f8",
+    "revision": "55423c2ed6b10093fa5b4bdb4b19d9e0",
     "url": "/myEHR-website/index.html"
   }
 ];
