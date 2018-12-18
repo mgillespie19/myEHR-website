@@ -34,18 +34,18 @@ class App extends Component {
       }
     });
   }
- 
+
   render() {
     return (
       <Root aboutRef={this.aboutRef}>
       {/* {this.state.user ? (<PatientProfile/>) : ( */}
         <BrowserRouter>
           <Switch>
-            <Route path="/" exact component={Home}/>
-            <Route path="/about" exact component={About}/>
-            <Route path="/patient" exact component={Patient}/>
-            <Route path="/provider" exact component={Provider}/>
-            <Route path="/account" exact component={Account}/>
+            <Route path={process.env.PUBLIC_URL + '/'} exact component={Home}/>
+            <Route path={process.env.PUBLIC_URL + '/about'} exact component={About}/>
+            <Route path={process.env.PUBLIC_URL + '/patient'} exact component={Patient}/>
+            <Route path={process.env.PUBLIC_URL + '/provider'} exact component={Provider}/>
+            <Route path={process.env.PUBLIC_URL + '/account'} exact component={Account}/>
           </Switch>
         </BrowserRouter>
       {/* )} */}
