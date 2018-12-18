@@ -30,6 +30,17 @@ class Home extends Component {
                                 <p><strong>Mission Statement:</strong> "Our goal is to improve patient outcome within the public health sector by democratizing health records with a secure system for everyone."</p>
                             </div>
                         </Animated>
+                        {/* <div className="learn-more">
+                            <h1>Learn More</h1>
+                            <div className="patient-card">
+                                <h2>myEHR Patient Account</h2>
+                                <img alt="patient icon" src=""/>
+                            </div>
+                            <div className="provider-card">
+                                <img alt="provider icon" src=""/>
+                                <h2>Provider Portal</h2>
+                            </div>
+                        </div> */}
                     </div>
                 </div>
                 <About aboutRef={this.aboutRef}/>
