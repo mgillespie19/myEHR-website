@@ -12,9 +12,41 @@ import Provider from './componets/pages/Provider/Provider';
 import About from './componets/pages/About/About';
 import PatientProfile from './componets/pages/AccountDirectory/PatientProfile/PatientProfile';
 import ProviderPortal from './componets/pages/AccountDirectory/ProviderPortal/ProviderPortal';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 import fire from './config/fire';
+
+const fireAuth = {
+  isAuthenticated: false,
+  authenticate(cb) {
+    this.isAuthenticated = true;
+    setTimeout(cb, 10000); 
+  },
+  signout(cb) {
+    this.isAuthenticated = false;
+    setTimeout(cb, 10000);
+  }
+};
+
+function PrivateRoute({ component: Component, ...rest }) {
+  return (
+    <Route
+      {...rest}
+      render={props =>
+        fireAuth.isAuthenticated ? (
+          <Component {...props} />
+        ) : (
+          <Redirect
+            to={{
+              pathname: "/account",
+              state: { from: props.location }
+            }}
+          />
+        )
+      }
+    />
+  );
+}
 
 
 class App extends Component {
@@ -33,12 +65,16 @@ class App extends Component {
   authListener(){
     fire.auth().onAuthStateChanged((user) => {
       if(user){
+        fireAuth.authenticate();
         this.setState({ user });
       } else {
+        fireAuth.signout();
         this.setState({ user: null });
       }
     });
   }
+
+  
 
   render() {
     return (
@@ -54,6 +90,10 @@ class App extends Component {
             <Route path="/account/provider" exact render={() => <ProviderLogin/>}/>
             <Route path="/account/patient/create" exact render={() => <PatientCreateAccount/>}/>
             <Route path="/account/provider/create" exact render={() => <ProviderCreateAccount/>}/>
+            <PrivateRoute path="/account/patient/profile" render={() => <PatientProfile/>}/>
+            <PrivateRoute path="/account/provider/portal" render={() => <ProviderPortal/>}/>
+
+
           </Switch>
         </BrowserRouter>
       </Root>
