@@ -19,6 +19,8 @@ class Root extends Component {
   }
 
   toggleSideDrawer = () => {
+    console.log("yo");
+    
     this.setState((prevState)=> {
       return {sideDrawerOpen: !prevState.sideDrawerOpen};
     });

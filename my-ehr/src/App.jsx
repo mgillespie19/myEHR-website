@@ -43,21 +43,19 @@ class App extends Component {
   render() {
     return (
       <Root aboutRef={this.aboutRef}>
-      {/* {this.state.user ? (<PatientProfile/>) : ( */}
         <BrowserRouter>
           <Switch>
-            <Route path="/" exact component={Home}/>
-            <Route path="/about" exact component={About}/>
-            <Route path="/patient" exact component={Patient}/>
-            <Route path="/provider" exact component={Provider}/>
-            <Route path="/account" exact component={AccountDirectory}/>
-            <Route path="/account/patient" exact component={PatientLogin}/>
-            <Route path="/account/provider" exact component={ProviderLogin}/>
-            <Route path="/account/patient/create" exact component={PatientCreateAccount}/>
-            <Route path="/account/provider/create" exact component={ProviderCreateAccount}/>
+            <Route path="/" exact render={() => <Home/>}/>
+            <Route path="/about" exact render={() => <About/>}/>
+            <Route path="/patient" exact render={() => <Patient/>}/>
+            <Route path="/provider" exact render={() => <Provider/>}/>
+            <Route path="/account" exact render={() => <AccountDirectory/>}/>
+            <Route path="/account/patient" exact render={() => <PatientLogin/>}/>
+            <Route path="/account/provider" exact render={() => <ProviderLogin/>}/>
+            <Route path="/account/patient/create" exact render={() => <PatientCreateAccount/>}/>
+            <Route path="/account/provider/create" exact render={() => <ProviderCreateAccount/>}/>
           </Switch>
         </BrowserRouter>
-      {/* )} */}
       </Root>
     );
   }
