@@ -79,10 +79,10 @@ class App extends Component {
   render() {
     return (
       <Root aboutRef={this.aboutRef}>
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <BrowserRouter>
           <Switch>
-            <Route path='/' exact render={() => <Home scrollToAbout={this.scrollToAbout}/>}/>
-            <Route path='/about' exact render={() => <About/>}/>
+            <Route path={process.env.PUBLIC_URL + '/'} exact render={() => <Home scrollToAbout={this.scrollToAbout}/>}/>
+            <Route path={process.env.PUBLIC_URL + '/about'} exact render={() => <About/>}/>
             <Route path={process.env.PUBLIC_URL + "/patient"} exact render={() => <Patient/>}/>
             <Route path={process.env.PUBLIC_URL + "/provider"} exact render={() => <Provider/>}/>
             <Route path={process.env.PUBLIC_URL + "/account"} exact render={() => <AccountDirectory/>}/>
