@@ -16,3 +16,13 @@
 .provider p {
     font-size: 1.3rem;
 }
+
+#title {
+  float:left;
+}
+
+#hospital {
+  width:20%;
+  margin-left: 20%;
+  margin-bottom: 2%;
+}
