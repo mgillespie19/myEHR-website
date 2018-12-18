@@ -31,9 +31,9 @@ class Navbar extends Component {
                         <ul>
                             <li><a href={process.env.PUBLIC_URL + '/'}> Home </a></li>
                             <li onClick={this.state.scrollToAbout}><a href={process.env.PUBLIC_URL + '/about'} >About</a></li>
-                            <li><a href={process.env.PUBLIC_URL + '/Patient'} >Patient</a></li>
-                            <li><a href={process.env.PUBLIC_URL + '/Provider'} >Provider</a></li>
-                            <li><a href={process.env.PUBLIC_URL + '/Account'} >Account</a></li>
+                            <li><a href={process.env.PUBLIC_URL + '/patient'} >Patient</a></li>
+                            <li><a href={process.env.PUBLIC_URL + '/provider'} >Provider</a></li>
+                            <li><a href={process.env.PUBLIC_URL + '/account'} >Account</a></li>
                         </ul>
                     </div>
                 </nav>
