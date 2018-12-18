@@ -29,11 +29,11 @@ class Navbar extends Component {
                     <div className="nav-spacing"/>
                     <div className="navbar-items">
                         <ul>
-                            <li><a href="/">Home</a></li>
-                            <li onClick={this.state.scrollToAbout}><a href="/about">About</a></li>
-                            <li><a href="/Patient">Patient</a></li>
-                            <li><a href="/Provider">Provider</a></li>
-                            <li><a href="/Account">Account</a></li>
+                            <li><a href={process.env.PUBLIC_URL + '/'}> Home </a></li>
+                            <li onClick={this.state.scrollToAbout}><a href={process.env.PUBLIC_URL + '/about'} >About</a></li>
+                            <li><a href={process.env.PUBLIC_URL + '/Patient'} >Patient</a></li>
+                            <li><a href={process.env.PUBLIC_URL + '/Provider'} >Provider</a></li>
+                            <li><a href={process.env.PUBLIC_URL + '/Account'} >Account</a></li>
                         </ul>
                     </div>
                 </nav>
