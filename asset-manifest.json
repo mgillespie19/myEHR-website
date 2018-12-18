@@ -1,7 +1,7 @@
 {
   "main.css": "./static/css/main.5c33cb80.chunk.css",
-  "main.js": "./static/js/main.3fe19786.chunk.js",
-  "main.js.map": "./static/js/main.3fe19786.chunk.js.map",
+  "main.js": "./static/js/main.58c39b12.chunk.js",
+  "main.js.map": "./static/js/main.58c39b12.chunk.js.map",
   "static/js/1.bacfcec6.chunk.js": "./static/js/1.bacfcec6.chunk.js",
   "static/js/1.bacfcec6.chunk.js.map": "./static/js/1.bacfcec6.chunk.js.map",
   "runtime~main.js": "./static/js/runtime~main.4a686d48.js",
@@ -16,6 +16,6 @@
   "static/media/hospital.png": "./static/media/hospital.10ebfeba.png",
   "static/css/main.5c33cb80.chunk.css.map": "./static/css/main.5c33cb80.chunk.css.map",
   "index.html": "./index.html",
-  "precache-manifest.dbad8d932397e0c1f63a84249c75f44b.js": "./precache-manifest.dbad8d932397e0c1f63a84249c75f44b.js",
+  "precache-manifest.2b214f413bbd5874eac644a7c14e602d.js": "./precache-manifest.2b214f413bbd5874eac644a7c14e602d.js",
   "service-worker.js": "./service-worker.js"
 }

@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "./static/media/GeosansLight.36e6a06a.ttf"
   },
   {
-    "revision": "3fe197865e074183ebd5",
+    "revision": "58c39b12895b91af31f6",
     "url": "./static/css/main.5c33cb80.chunk.css"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "./static/media/hospital.10ebfeba.png"
   },
   {
-    "revision": "3fe197865e074183ebd5",
-    "url": "./static/js/main.3fe19786.chunk.js"
+    "revision": "58c39b12895b91af31f6",
+    "url": "./static/js/main.58c39b12.chunk.js"
   },
   {
     "revision": "acc78cc8db19273751875aeec276a990",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "./static/media/medicalblock.e86e5d3b.png"
   },
   {
-    "revision": "aab3a99da2fe1a4d05b9b0c8906c8c82",
+    "revision": "b45b8b5928450d8611598711219f9f9f",
     "url": "./index.html"
   }
 ];
