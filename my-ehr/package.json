@@ -2,6 +2,7 @@
   "name": "my-ehr",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mgillespie19.github.io/myEHR-website",
   "dependencies": {
     "firebase": "^5.7.0",
     "react": "^16.6.3",
@@ -14,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && cp build/index.html build/404.html",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "predeploy:": "npm run build",
     "deploy": "gh-pages -d build",
