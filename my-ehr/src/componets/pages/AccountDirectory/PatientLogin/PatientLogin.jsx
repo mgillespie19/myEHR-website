@@ -1,21 +1,26 @@
-import React, { Component } from 'react';
+import React, { Component} from 'react';
 import './PatientLogin.css';
 import fire from '../../../../config/fire';
+import { Redirect } from 'react-router-dom';
 
 
 class PatientLogin extends Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             email: "",
             password: "",
+            toProfile: false,
         }
     }
    login = (event) => {
        
         event.preventDefault();
         fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((e)=>{
-            console.log("User Signed In!!");
+            console.log("update logged in state");
+            this.setState({
+                toProfile: true,
+            });
         }).catch((error)=>{
             console.log(error); 
             this.refs.errorMessage.innerHTML = error;
@@ -27,6 +32,10 @@ class PatientLogin extends Component {
     }
 
     render() {
+        if(this.state.toProfile){
+            console.log("logging in to account");
+            return <Redirect to="/account/patient/profile"/>
+        }
         return(
             <div className="patient-login">
                 <div className="login-container">

@@ -56,23 +56,35 @@ class App extends Component {
     this.state = {
       user: {},
     }
+
   }
 
   componentDidMount(){
     this.authListener()
   }
 
+  componentWillUnmount(){
+    fireAuth.signout();
+  }
+
   authListener(){
     fire.auth().onAuthStateChanged((user) => {
       if(user){
+        console.log("authListener: "+user.uid+" logged in");
         fireAuth.authenticate();
         this.setState({ user });
+        console.log("Redirect to user profile page.");
+        console.log("state: "+this.state.user.uid);
+        console.log("private ?: "+fireAuth.isAuthenticated);
+        
       } else {
+        console.log("authListener: "+user+" logged out");
         fireAuth.signout();
         this.setState({ user: null });
       }
     });
   }
+
 
 
 
@@ -85,7 +97,7 @@ class App extends Component {
               <Route path= "/account/provider/create" component={ProviderCreateAccount}/>
               <PrivateRoute path="/account/patient/profile" component={PatientProfile}/>
               <PrivateRoute path="/account/provider/portal" component={ProviderPortal}/>
-              <Route path="/account/patient" component={PatientLogin}/>
+              <Route path="/account/patient" render={ () =><PatientLogin/>}/>
               <Route path="/account/provider" component={ProviderLogin}/>
               <Route path="/about" component={About}/>
               <Route path="/patient" component={Patient}/>
