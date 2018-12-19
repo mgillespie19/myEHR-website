@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Provider.css';
+import {Link} from 'react-router-dom';
 
 
 class Provider extends Component {
@@ -11,8 +12,8 @@ class Provider extends Component {
                     <h1 id="title"> Provider Portal Coming Soon...</h1>
                     <img id="hospital" alt="Hospital" src={require("../../../assets/images/hospital.png")} />
                     <p>The provider portal is currently under development still, and is not ready for deployment.</p>
-                    <a href="/account/provider"><div>Access Provider Portal</div></a>
-                    <a href="/account/provider/create"><div>Register a Provider Portal</div></a>
+                    <Link to="/account/provider"><div>Access Provider Portal</div></Link>
+                    <Link to="/account/provider/create"><div>Register a Provider Portal</div></Link>
                 </div>
             </div>
         );

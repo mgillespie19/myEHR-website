@@ -81,16 +81,16 @@ class App extends Component {
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Root aboutRef={this.aboutRef}>
             <Switch>
+              <Route path="/account/patient/create" component={PatientCreateAccount}/>
+              <Route path= "/account/provider/create" component={ProviderCreateAccount}/>
+              <PrivateRoute path="/account/patient/profile" component={PatientProfile}/>
+              <PrivateRoute path="/account/provider/portal" component={ProviderPortal}/>
+              <Route path="/account/patient" component={PatientLogin}/>
+              <Route path="/account/provider" component={ProviderLogin}/>
               <Route path="/about" component={About}/>
               <Route path="/patient" component={Patient}/>
               <Route path="/provider" component={Provider}/>
               <Route path="/account" component={AccountDirectory}/>
-              <Route path={process.env.PUBLIC_URL + "/account/patient"} component={PatientLogin}/>
-              <Route path={process.env.PUBLIC_URL + "/account/provider"} component={ProviderLogin}/>
-              <Route path={process.env.PUBLIC_URL + "/account/patient/create"} component={PatientCreateAccount}/>
-              <Route path={process.env.PUBLIC_URL + "/account/provider/create"} component={ProviderCreateAccount}/>
-              <PrivateRoute path={process.env.PUBLIC_URL + "/account/patient/profile"} component={PatientProfile}/>
-              <PrivateRoute path={process.env.PUBLIC_URL + "/account/provider/portal"} component={ProviderPortal}/>
               <Route path="/" render={() => <Home scrollToAbout={this.scrollToAbout}/>}/>
             </Switch>
           </Root>

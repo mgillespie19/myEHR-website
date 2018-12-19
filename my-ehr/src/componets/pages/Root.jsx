@@ -50,7 +50,7 @@ class Root extends Component {
     return (
       <div className="app">
         <Navbar toggleSideDrawer={this.toggleSideDrawer} scrollToAbout={this.scrollToAbout} showSideDrawer={this.state.sideDrawerOpen}/>
-        <SideDrawer showSideDrawer={this.state.sideDrawerOpen} scrollToAbout={this.scrollToAbout} toggleSideDrawer={this.toggleSideDrawer}/>
+        <SideDrawer showSideDrawer={this.state.sideDrawerOpen} scrollToAbout={this.scrollToAbout} toggleSideDrawer={this.toggleSideDrawer} closeSideDrawer={this.closeSideDrawer}/>
         {backdrop}
         <div className="container">
             {this.props.children}
