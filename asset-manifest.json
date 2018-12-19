@@ -1,7 +1,7 @@
 {
   "main.css": "/myEHR-website/static/css/main.f84f797a.chunk.css",
-  "main.js": "/myEHR-website/static/js/main.8790f10c.chunk.js",
-  "main.js.map": "/myEHR-website/static/js/main.8790f10c.chunk.js.map",
+  "main.js": "/myEHR-website/static/js/main.d53388aa.chunk.js",
+  "main.js.map": "/myEHR-website/static/js/main.d53388aa.chunk.js.map",
   "static/js/1.5b56e7cb.chunk.js": "/myEHR-website/static/js/1.5b56e7cb.chunk.js",
   "static/js/1.5b56e7cb.chunk.js.map": "/myEHR-website/static/js/1.5b56e7cb.chunk.js.map",
   "runtime~main.js": "/myEHR-website/static/js/runtime~main.0dcb318e.js",
@@ -16,6 +16,6 @@
   "static/media/hospital.png": "/myEHR-website/static/media/hospital.10ebfeba.png",
   "static/css/main.f84f797a.chunk.css.map": "/myEHR-website/static/css/main.f84f797a.chunk.css.map",
   "index.html": "/myEHR-website/index.html",
-  "precache-manifest.0c211e38c100ea188316fa648d73eb69.js": "/myEHR-website/precache-manifest.0c211e38c100ea188316fa648d73eb69.js",
+  "precache-manifest.34e694f6970a3fc2d3b64edcf375340c.js": "/myEHR-website/precache-manifest.34e694f6970a3fc2d3b64edcf375340c.js",
   "service-worker.js": "/myEHR-website/service-worker.js"
 }
