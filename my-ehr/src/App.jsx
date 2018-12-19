@@ -80,19 +80,21 @@ class App extends Component {
     return (
       <Root aboutRef={this.aboutRef}>
         <BrowserRouter>
+          <div>
           <Switch>
             <Route exact path={process.env.PUBLIC_URL + "/"} render={() => <Home scrollToAbout={this.scrollToAbout}/>}/>
-            <Route path={process.env.PUBLIC_URL + "/about"} render={() => <About/>}/>
-            <Route path={process.env.PUBLIC_URL + "/patient"} render={() => <Patient/>}/>
-            <Route path={process.env.PUBLIC_URL + "/provider"} render={() => <Provider/>}/>
-            <Route path={process.env.PUBLIC_URL + "/account"} render={() => <AccountDirectory/>}/>
-            <Route path={process.env.PUBLIC_URL + "/account/patient"} render={() => <PatientLogin/>}/>
-            <Route path={process.env.PUBLIC_URL + "/account/provider"} render={() => <ProviderLogin/>}/>
-            <Route path={process.env.PUBLIC_URL + "/account/patient/create"} render={() => <PatientCreateAccount/>}/>
-            <Route path={process.env.PUBLIC_URL + "/account/provider/create"} render={() => <ProviderCreateAccount/>}/>
-            <PrivateRoute path={process.env.PUBLIC_URL + "/account/patient/profile"} render={() => <PatientProfile/>}/>
-            <PrivateRoute path={process.env.PUBLIC_URL + "/account/provider/portal"} render={() => <ProviderPortal/>}/>
+            <Route path={process.env.PUBLIC_URL + "/about"} component={About}/>
+            <Route path={process.env.PUBLIC_URL + "/patient"} component={Patient}/>
+            <Route path={process.env.PUBLIC_URL + "/provider"} component={Provider}/>
+            <Route path={process.env.PUBLIC_URL + "/account"} component={AccountDirectory}/>
+            <Route path={process.env.PUBLIC_URL + "/account/patient"} component={PatientLogin}/>
+            <Route path={process.env.PUBLIC_URL + "/account/provider"} component={ProviderLogin}/>
+            <Route path={process.env.PUBLIC_URL + "/account/patient/create"} component={PatientCreateAccount}/>
+            <Route path={process.env.PUBLIC_URL + "/account/provider/create"} component={ProviderCreateAccount}/>
+            <PrivateRoute path={process.env.PUBLIC_URL + "/account/patient/profile"} component={PatientProfile}/>
+            <PrivateRoute path={process.env.PUBLIC_URL + "/account/provider/portal"} component={ProviderPortal}/>
           </Switch>
+          </div>
         </BrowserRouter>
       </Root>
     );
