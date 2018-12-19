@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/myEHR-website/precache-manifest.06a5f750ac4df5d3bcdb1a4d28aae8cd.js"
+  "/myEHR-website/precache-manifest.cda1f2d145f5307e9e608d1d36958de3.js"
 );
 
 workbox.clientsClaim();
