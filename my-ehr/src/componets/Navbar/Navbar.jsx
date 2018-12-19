@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 
 import './Navbar.css';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
-import { a } from 'react-router-dom';
 
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 
 class Navbar extends Component {
@@ -31,18 +30,15 @@ class Navbar extends Component {
                     </div>
                     <div className="logo"><a href={process.env.PUBLIC_URL + '/'}>myEHR</a></div>
                     <div className="nav-spacing"/>
-                    <BrowserRouter>
-                        <div className="navbar-items">
-                            <ul>
-                                <li><a href={process.env.PUBLIC_URL + '/'}> Home </a></li>
-                                <li onClick={this.state.scrollToAbout}><a href={process.env.PUBLIC_URL + '/about/'} >About</a></li>
-                                <li><a href={process.env.PUBLIC_URL + '/patient/'} >Patient</a></li>
-                                <li><a href={process.env.PUBLIC_URL + '/provider/'}>Provider</a></li>
-                                <li><a href={process.env.PUBLIC_URL + '/account/'}>Account</a></li>
-                            </ul>
-
-                        </div>
-                    </BrowserRouter>
+                    <div className="navbar-items">
+                        <ul>
+                            <li><Link to='/'>Home</Link></li>
+                            <li><Link to='/about'>About</Link></li>
+                            <li><Link to='/patient/'>Patient</Link></li>
+                            <li><Link to='/provider/'>Provider</Link></li>
+                            <li><Link to='/account/'>Account</Link></li>
+                        </ul>
+                    </div>
                 </nav>
             </header>
         );
