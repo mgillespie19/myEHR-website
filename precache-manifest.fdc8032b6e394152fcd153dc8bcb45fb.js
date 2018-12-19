@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/myEHR-website/static/media/medicalblock.e86e5d3b.png"
   },
   {
-    "revision": "f2325d22d84ade11f3598f07f00eb38c",
+    "revision": "3ce19a241f60a4895fe42a49807ce31b",
     "url": "/myEHR-website/index.html"
   }
 ];
