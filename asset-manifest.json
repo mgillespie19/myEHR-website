@@ -1,9 +1,9 @@
 {
-  "main.css": "/myEHR-website/static/css/main.c1e09bb0.chunk.css",
-  "main.js": "/myEHR-website/static/js/main.15e9399e.chunk.js",
-  "main.js.map": "/myEHR-website/static/js/main.15e9399e.chunk.js.map",
-  "static/js/1.6a79b901.chunk.js": "/myEHR-website/static/js/1.6a79b901.chunk.js",
-  "static/js/1.6a79b901.chunk.js.map": "/myEHR-website/static/js/1.6a79b901.chunk.js.map",
+  "main.css": "/myEHR-website/static/css/main.4c3c1ded.chunk.css",
+  "main.js": "/myEHR-website/static/js/main.4f4cb894.chunk.js",
+  "main.js.map": "/myEHR-website/static/js/main.4f4cb894.chunk.js.map",
+  "static/js/1.29fff038.chunk.js": "/myEHR-website/static/js/1.29fff038.chunk.js",
+  "static/js/1.29fff038.chunk.js.map": "/myEHR-website/static/js/1.29fff038.chunk.js.map",
   "runtime~main.js": "/myEHR-website/static/js/runtime~main.0dcb318e.js",
   "runtime~main.js.map": "/myEHR-website/static/js/runtime~main.0dcb318e.js.map",
   "static/media/house.png": "/myEHR-website/static/media/house.27054747.png",
@@ -14,8 +14,8 @@
   "static/media/google-play-badge.png": "/myEHR-website/static/media/google-play-badge.db9b21a1.png",
   "static/media/medicalblock.png": "/myEHR-website/static/media/medicalblock.e86e5d3b.png",
   "static/media/hospital.png": "/myEHR-website/static/media/hospital.10ebfeba.png",
-  "static/css/main.c1e09bb0.chunk.css.map": "/myEHR-website/static/css/main.c1e09bb0.chunk.css.map",
+  "static/css/main.4c3c1ded.chunk.css.map": "/myEHR-website/static/css/main.4c3c1ded.chunk.css.map",
   "index.html": "/myEHR-website/index.html",
-  "precache-manifest.1972b5e8a404fd3e9179b6d38e663721.js": "/myEHR-website/precache-manifest.1972b5e8a404fd3e9179b6d38e663721.js",
+  "precache-manifest.604f4b6545d99809e4f4bb6ca82df974.js": "/myEHR-website/precache-manifest.604f4b6545d99809e4f4bb6ca82df974.js",
   "service-worker.js": "/myEHR-website/service-worker.js"
 }
