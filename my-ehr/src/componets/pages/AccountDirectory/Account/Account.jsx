@@ -11,14 +11,14 @@ class Account extends Component {
                 <div className="account">
                     <div className="patient">
                         <div className="account-icon">
-                            <img id="house" alt="patient icon" src={require("../../../../assets/images/house.png")}/>
-                            <Link to='/account/patient'><div>Patient</div></Link>
+                            <img alt="patient icon" src={require("../../../../assets/images/house.png")}/>
+                            <Link to='/account/patient'><div className="button">Patient</div></Link>
                         </div>
                     </div>
                     <div className="provider">
                         <div className="account-icon">
-                            <img id="hospital" alt="provider icon" src={require("../../../../assets/images/hospital.png")}/>
-                            <Link to='/account/provider'><div>Provider</div></Link>
+                            <img alt="provider icon" src={require("../../../../assets/images/hospital.png")}/>
+                            <Link to='/account/provider'><div className="button">Provider</div></Link>
                         </div>
                     </div>
                 </div>

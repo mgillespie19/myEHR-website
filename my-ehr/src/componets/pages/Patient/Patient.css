@@ -16,12 +16,40 @@
     font-size: 1.3rem;
 }
 
-#title {
-  float:left;
+.patient img {
+    max-width: 300px;
+    min-width: 200px;
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0px auto;
 }
 
-#house {
-  width:20%;
-  margin-left: 60%;
-  margin-bottom: 2%;
+.patient .button{
+    display: block;
+    background-color: rgba(145, 61, 136, 1);
+    color: white;
+    width: 250px;
+    padding: 20px;
+    margin: 20px;
+    font-size: 1.3rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px 0 RGBA(0, 0, 0, 0.5);
 }
+
+.patient .button:hover{
+    background-color: rgba(145, 61, 136, 0.9);
+}
+
+.patient .button:active {
+    box-shadow: 0 8px 16px 0 RGBA(0, 0, 0, 0.2);
+}
+
+.patient a {
+    text-decoration: none;
+}
+
+
+
