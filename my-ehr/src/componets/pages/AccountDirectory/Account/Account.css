@@ -11,32 +11,46 @@
   margin-right: auto;
   width: 90%;
   padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .account img {
-  width: 20%;
+  max-width: 300px;
+  min-width: 200px;
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
 }
 
-.account .button{
-  display: block;
-  background-color: rgba(145, 61, 136, 1);
-  color: white;
-  width: 250px;
-  padding: 20px;
+.account .card{
+  max-width: 340px;
+  min-width: 240px;
+  width: 60%;
+  background-color: rgba(20, 20, 20, 0.3);
   margin: 20px;
-  font-size: 1.3rem;
-  text-align: center;
-  text-decoration: none;
   border-radius: 20px;
-  box-shadow: 0 8px 16px 0 RGBA(0, 0, 0, 0.5);
+  flex: 1;
+  box-shadow: 0 8px 16px 0 RGBA(0, 0, 0, 0.3);
 }
 
-.account .button:hover{
-  background-color: rgba(145, 61, 136, 0.9);
+.account .card:hover {
+  background-color: rgba(20, 20, 20, 0.2);
 }
 
-.account .button:active {
-  box-shadow: 0 8px 16px 0 RGBA(0, 0, 0, 0.2);
+.account h2{
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 20px;
+}
+
+.account h1{
+  font-size: 1.6rem;
+}
+
+.title {
+  padding: 10px 40px;
 }
 
 .account a {

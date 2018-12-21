@@ -8,19 +8,26 @@ class Account extends Component {
     render() {
         return(
             <div className="container">
+                <div className="title">
+                    <h1>Select an Account Type</h1>
+                </div>
                 <div className="account">
-                    <div className="patient">
-                        <div className="account-icon">
-                            <img alt="patient icon" src={require("../../../../assets/images/house.png")}/>
-                            <Link to='/account/patient'><div className="button">Patient</div></Link>
+                    <Link to='/account/patient'>
+                        <div className="card">
+                            <h2>Patient</h2>
+                            <center>
+                                <img alt="patient icon" src={require("../../../../assets/images/house.png")}/>
+                            </center>
                         </div>
-                    </div>
-                    <div className="provider">
-                        <div className="account-icon">
-                            <img alt="provider icon" src={require("../../../../assets/images/hospital.png")}/>
-                            <Link to='/account/provider'><div className="button">Provider</div></Link>
+                    </Link>
+                    <Link to='/account/provider'>
+                        <div className="card">
+                            <h2>Provider</h2>
+                            <center>
+                                <img alt="provider icon" src={require("../../../../assets/images/hospital.png")}/>
+                            </center>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </div>
         );

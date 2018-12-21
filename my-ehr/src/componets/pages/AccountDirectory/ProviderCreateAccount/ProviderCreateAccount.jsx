@@ -14,11 +14,13 @@ class ProviderCreateAccount extends Component {
 
     render() {
         return(
-            <div className="provider-login">
+            <div className="provider-create-account">
                 <div className="login-container">
                     <h2>Register Provider Portal</h2>
-                    
                 </div>
+                <center>
+                    <h3>Coming Soon...</h3>
+                </center>
             </div>
         );
     }
