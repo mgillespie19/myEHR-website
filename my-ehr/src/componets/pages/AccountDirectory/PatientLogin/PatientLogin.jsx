@@ -13,6 +13,13 @@ class PatientLogin extends Component {
             toProfile: false,
         }
     }
+
+    enterKeyPress = (event) => {
+        if(event.keyCode === 13){
+           this.login(event);
+        }
+    }
+
    login = (event) => {
        
         event.preventDefault();
@@ -45,7 +52,7 @@ class PatientLogin extends Component {
                             <img alt="patient icon" src={require("../../../../assets/images/house.png")}/>
                             <form>
                                 <input onChange={this.updateState} type="email" name="email" placeholder="Email" required/><br/>
-                                <input onChange={this.updateState} type="password" name="password" placeholder="Password" required/><br/>
+                                <input onKeyDown={this.enterKeyPress} onChange={this.updateState} type="password" name="password" placeholder="Password" required/><br/>
                                 <div className="button" onClick={this.login}>Login</div>
                             </form>
                             <p>Need an account? 

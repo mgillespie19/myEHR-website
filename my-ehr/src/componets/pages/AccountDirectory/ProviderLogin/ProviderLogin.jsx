@@ -15,10 +15,10 @@ class ProviderLogin extends Component {
     render() {
         return(
             <div className="provider-login">
-                <div className="login-container">
-                    <h2>Provider Portal Login</h2>
-                </div>
                 <center>
+                    <div className="login-container">
+                        <h2>Provider Portal Login</h2>
+                    </div>
                     <h3>Coming Soon...</h3>
                 </center>
             </div>
