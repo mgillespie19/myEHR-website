@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/myEHR-website/static/media/GeosansLight.36e6a06a.ttf"
   },
   {
-    "revision": "ded9ddf02f3ab1dab614",
-    "url": "/myEHR-website/static/css/main.76192093.chunk.css"
+    "revision": "2f8824010c644808c686",
+    "url": "/myEHR-website/static/css/main.29353281.chunk.css"
   },
   {
-    "revision": "1295a04689a88f14ed4a",
-    "url": "/myEHR-website/static/js/1.1295a046.chunk.js"
+    "revision": "3b64611569871a3c8fc1",
+    "url": "/myEHR-website/static/js/1.3b646115.chunk.js"
   },
   {
     "revision": "0dcb318e3618ea0c2ac7",
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/myEHR-website/static/media/hospital.10ebfeba.png"
   },
   {
-    "revision": "ded9ddf02f3ab1dab614",
-    "url": "/myEHR-website/static/js/main.ded9ddf0.chunk.js"
+    "revision": "2f8824010c644808c686",
+    "url": "/myEHR-website/static/js/main.2f882401.chunk.js"
   },
   {
     "revision": "acc78cc8db19273751875aeec276a990",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/myEHR-website/static/media/medicalblock.e86e5d3b.png"
   },
   {
-    "revision": "40560e9de99289670b30be042153a496",
+    "revision": "570ae884980b11884f55f61054074325",
     "url": "/myEHR-website/index.html"
   }
 ];
