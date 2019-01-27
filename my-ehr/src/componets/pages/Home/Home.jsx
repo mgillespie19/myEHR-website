@@ -43,6 +43,15 @@ class Home extends Component {
                         </div> */}
                     </div>
                 </div>
+                <div className="health">
+                    <h1>How blockchain can save healthcare</h1>
+                    <center>
+                        <div className="youtube-video">
+                            <iframe title="myEHR Video" width="400" height="400" src="https://www.youtube.com/embed/F2VJxuyrw9I"></iframe>
+                        </div>
+                    </center>
+                </div>
+                
                 <About aboutRef={this.aboutRef}/>
             </div>
         );

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './PatientProfile.css';
-import fire from '../../../../config/fire';
+//import fire from '../../../../config/fire';
 
 
 class PatientProfile extends Component {
@@ -28,7 +28,7 @@ class PatientProfile extends Component {
                     <h2>{this.email}</h2>
                     <div className="profile-image-background">
                         <div className="profile-image-ring">
-                            <img alt="profile picture" src=""/>
+                            <img alt="profile" src=""/>
                         </div>
                     </div>
                     <button>View Records</button>

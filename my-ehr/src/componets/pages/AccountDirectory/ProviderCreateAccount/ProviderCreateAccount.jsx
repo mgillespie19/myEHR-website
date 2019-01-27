@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './ProviderCreateAccount.css';
-import fire from '../../../../config/fire';
+//import fire from '../../../../config/fire';
 
 
 class ProviderCreateAccount extends Component {

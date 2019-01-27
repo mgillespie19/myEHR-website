@@ -19,25 +19,25 @@ class PatientCreateAccount extends Component {
     }
 
     formIsValid = () => {        
-        if(this.state.name == ""){
+        if(this.state.name === ""){
             this.setState({
                 errorMessage: "Name field must be feeled out.",
             });
             return false;
         }
-        if(this.state.email == ""){
+        if(this.state.email === ""){
             this.setState({
                 errorMessage: "Email field must be feeled out.",
             });
             return false;
         }
-        if(this.state.password == ""){
+        if(this.state.password === ""){
             this.setState({
                 errorMessage: "Password field must be feeled out.",
             });
             return false;
         }
-        if(this.state.reEnterPassword == ""){
+        if(this.state.reEnterPassword === ""){
             this.setState({
                 errorMessage: "Reenter Password field must be feeled out.",
             });

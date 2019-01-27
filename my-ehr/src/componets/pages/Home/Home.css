@@ -24,6 +24,7 @@
     margin-right: auto;
     width: 90%;
     padding: 20px;
+    min-height: 100vh;
 }
 
 .mission-statement {
@@ -41,4 +42,20 @@
 
 .mission-statement strong {
     font-size: 1.5rem;
+}
+.youtube-video  {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+
+}
+.youtube-video iframe {
+    object-fit: contain;
+    width: 90vw;
+    height: 50vw;
+    max-width: 800px;
+    max-height: 500px;
+}
+.health h1 {
+    margin-left: 20px;
 }
