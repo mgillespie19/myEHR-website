@@ -10,6 +10,8 @@ import ProviderCreateAccount from './componets/pages/AccountDirectory/ProviderCr
 import Patient from './componets/pages/Patient/Patient';
 import Provider from './componets/pages/Provider/Provider';
 import About from './componets/pages/About/About';
+import Faq from './componets/pages/FAQ/Faq';
+
 import PatientProfile from './componets/pages/AccountDirectory/PatientProfile/PatientProfile';
 import ProviderPortal from './componets/pages/AccountDirectory/ProviderPortal/ProviderPortal';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
@@ -100,6 +102,7 @@ class App extends Component {
               <Route path="/account/patient" render={ () =><PatientLogin/>}/>
               <Route path="/account/provider" component={ProviderLogin}/>
               <Route path="/about" component={About}/>
+              <Route path="/faq" component={Faq}/>
               <Route path="/patient" component={Patient}/>
               <Route path="/provider" component={Provider}/>
               <Route path="/account" component={AccountDirectory}/>

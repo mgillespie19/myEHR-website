@@ -10,6 +10,7 @@ class Account extends Component {
             <div className="container">
                 <div className="title">
                     <h1>Select an Account Type</h1>
+                    <p>myEHR offers two account types, one for patients and the other for providers. Please select an account type.</p>
                 </div>
                 <div className="account">
                     <Link to='/account/patient'>

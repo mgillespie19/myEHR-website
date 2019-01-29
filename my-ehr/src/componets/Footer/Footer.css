@@ -9,3 +9,30 @@
 .footer p {
     font-size: 1.0rem;
 }
+.social-media-bar {
+    padding: 10px;
+    padding-left: 20px;
+    margin: 0px;
+}
+.social-media-bar p {
+    font-size: 1.1rem;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+}
+.social-media-icons {
+    padding: 0px;
+    margin-bottom: -30px;
+}
+.social-media-icons img {
+    padding: 5px;
+    margin-left: -5px;
+    height: 32px;
+    width: 32px;
+}
+
+.social-media-icons img:hover {
+    padding: 2px;
+    height: 38px;
+    width: 38px;
+}
