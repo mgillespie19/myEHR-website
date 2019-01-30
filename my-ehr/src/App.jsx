@@ -17,6 +17,8 @@ import ProviderPortal from './componets/pages/AccountDirectory/ProviderPortal/Pr
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 import fire from './config/fire';
+import ReactGA from 'react-ga';
+
 
 const fireAuth = {
   isAuthenticated: false,
@@ -50,6 +52,11 @@ function PrivateRoute({ component: Component, ...rest }) {
   );
 }
 
+function initializeReactGA() {
+  ReactGA.initialize('UA-133442569-1');
+  ReactGA.pageview('/');
+}
+
 
 class App extends Component {
   constructor(props) {
@@ -62,7 +69,8 @@ class App extends Component {
   }
 
   componentDidMount(){
-    this.authListener()
+    this.authListener();
+    this.initializeReactGA();
   }
 
   componentWillUnmount(){
