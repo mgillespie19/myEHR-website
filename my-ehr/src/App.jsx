@@ -52,11 +52,6 @@ function PrivateRoute({ component: Component, ...rest }) {
   );
 }
 
-function initializeReactGA() {
-  ReactGA.initialize('UA-133442569-1');
-  ReactGA.pageview('/');
-}
-
 
 class App extends Component {
   constructor(props) {
@@ -93,6 +88,11 @@ class App extends Component {
         this.setState({ user: null });
       }
     });
+  }
+
+  initializeReactGA() {
+    ReactGA.initialize('UA-133442569-1');
+    ReactGA.pageview('/');
   }
 
 
