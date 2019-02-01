@@ -1,7 +1,3 @@
-@font-face {
-    font-family: 'geo_sans_light';
-    src: local('geo_sans_light'), url(../../assets/fonts/geo_sans_light/GeosansLight.ttf) format('ttf');
-}
 .navbar {
     position: fixed;
     top: 0;
@@ -40,7 +36,6 @@
    text-decoration: none;
    border-width: 0px;
    font-size: 1.3em;
-   font-family: geo_sans_light;
  }
 
 .navbar-items a:hover {
