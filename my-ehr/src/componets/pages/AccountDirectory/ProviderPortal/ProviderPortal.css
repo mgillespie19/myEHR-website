@@ -1,0 +1,47 @@
+.secondary-navbar {
+    background-color: rgba(130,0,140);
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.secondary-navbar ul {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    display: flex;
+    margin-right: 10px;
+}
+
+.secondary-navbar li {
+    padding: 0 1.0rem;
+    color: white;
+}
+
+.nav-spacing {
+    flex: 1.0;
+}
+
+.navbar-items li:hover {
+    color: orange;
+    text-decoration: none;
+    outline-style: none;
+    cursor: pointer;
+}
+
+.dashboard {
+    display: flex;
+}
+.provider-content {
+
+}
+.provider-content h1{
+    padding: 50px;
+}
+
+.side-menu{
+    height: 100vh;
+    margin: 0;
+    background-color: rgba(130,0,140);
+}

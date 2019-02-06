@@ -1,0 +1,115 @@
+.team {
+    background-image: linear-gradient(rgba(106,0,148), rgba(130,0,140),rgba(106,0,148));
+    height: 100%;
+    width: 100%;
+}
+
+.team h1 {
+    padding: 20px;
+    padding-top: 45px;
+    color: white;
+    margin-left: 10px;
+
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 0px 20px;
+    margin: 10px;
+   
+}
+
+.bio-card{
+    margin: 20px auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5%;
+    width: 30vw;
+    min-width: 300px;
+    max-width: 450px;
+    box-shadow: 0 10px 20px 0 RGBA(0, 0, 0, 0.4);
+}
+.name {
+    display: inline-block;
+    height: 20px;
+    margin-top: 60px;
+    margin-left: 10px;
+}
+.bio-card .headshot {
+    width: 140px;
+    height: 140px;
+    float: left;
+    display: inline-block;
+    background-image: linear-gradient(to bottom left, rgba(106,0,148), orange);
+    border-radius: 80px;
+}
+.bio-card img {
+    width: 128px;
+    height: 128px;
+    margin: 4px;
+    padding: 2px;
+    background-color: white;
+    border-radius: 64px;
+
+}
+
+.bio-header {
+    display: inline-block;
+    width: 100%;
+
+}
+
+.bio-card p {
+    padding: 10px;
+}
+
+.team .line-break {
+    width: 95%;
+}
+
+.team .logo {
+    width: 100px;
+    float: left;
+    display: block;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 1400px) {
+    .team-grid {
+        grid-template-columns: auto auto;
+    }
+    .bio-card {
+        width: 45vw;
+    } 
+}
+
+@media screen and (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: auto;
+    }
+    .bio-card {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+   
+    .bio-card .headshot {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+    .bio-header{
+        text-align: center;
+    }
+    .name {
+        width: 100%;
+        display: block;
+        padding: 0px;
+        margin: 15px auto;
+       
+    }
+  
+}

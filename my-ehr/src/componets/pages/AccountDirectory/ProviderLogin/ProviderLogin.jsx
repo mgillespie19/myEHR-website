@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './ProviderLogin.css';
 //import fire from '../../../../config/fire';
+import { Link } from 'react-router-dom';
 
 
 class ProviderLogin extends Component {
@@ -20,6 +21,7 @@ class ProviderLogin extends Component {
                         <h2>Provider Portal Login</h2>
                     </div>
                     <h3>Coming Soon...</h3>
+                    <Link to="/account/provider/portal">Provider Portal View</Link>
                 </center>
             </div>
         );

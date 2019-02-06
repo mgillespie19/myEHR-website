@@ -12,7 +12,9 @@ class Faq extends Component {
     render() {
         return(
             <div className="faq">
+                <img className="logo" alt="logo" src={require("../../../assets/images/medicalblock.png")}/>
                 <h1 ref={this.faqRef}>Frequently Asked Questions (FAQ)</h1>
+                <div className="line-break"></div> 
                 <Animated animationIn="bounceInRight" animationOut="bounceOutLeft" isVisible={true}>
                     <div className="question-list">
                         <div className="faq-block">
@@ -22,7 +24,7 @@ class Faq extends Component {
                             </div>
                             <div className="answer">
                                 <h2>A.</h2>
-                                <p>It is a system that stores information in a decentralized peer to peer network.</p>
+                                <p>It is a system that stores transactions in a decentralized peer to peer network.</p>
                             </div>
                         </div>
                         <div className="line-break"></div> 

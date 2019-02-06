@@ -1,7 +1,7 @@
-
-
 .faq h1 {
     padding: 20px;
+    padding-top: 45px;
+    margin-left: 10px;
 }
 
 
@@ -57,10 +57,23 @@
     color: rgb(80,80,80);
 }
 
-.line-break {
-    height: 1px;
-    width: 90%;
-    margin: 20px auto;
-    background-color: rgb(200, 200, 200);
+.faq .line-break {
+    width: 95%;
+}
 
+.faq .logo {
+    width: 100px;
+    float: left;
+    display: block;
+    margin-left: 20px;
+}
+
+
+@media screen and (max-width: 632px) {
+
+    .faq .logo {
+        margin-top: 20px;
+    }
+    
+  
 }

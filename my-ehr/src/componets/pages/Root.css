@@ -10,3 +10,14 @@
     padding: 0px;
     margin: 0px;
 }
+
+.container {
+    margin-top: 64px;
+}
+.line-break {
+    height: 1px;
+    width: 90%;
+    margin: 20px auto;
+    background-color: rgb(200, 200, 200);
+
+}
