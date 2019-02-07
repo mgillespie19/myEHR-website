@@ -11,7 +11,7 @@ class Provider extends Component {
                 <h1 id="title"> Provider Portal Coming Soon...</h1>
                 <Link to="/account/provider/portal">
                     <div className="provider-image">
-                        <img id="hospital" alt="Hospital" src={require("../../../assets/images/hospital.png")} />
+                        <img alt="Hospital" src={require("../../../assets/images/hospital.png")} />
                     </div>
                 </Link>
                 <p>The provider portal is currently under development still, and is not ready for deployment.</p>
