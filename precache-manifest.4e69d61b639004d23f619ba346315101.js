@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/myEHR-website/static/media/riceCompetition.b29451c3.jpg"
   },
   {
-    "revision": "5ba385971d8c76240ade",
-    "url": "/myEHR-website/static/css/main.ca85893c.chunk.css"
+    "revision": "ed51e328262d2cb1f150",
+    "url": "/myEHR-website/static/css/main.31ea669a.chunk.css"
   },
   {
-    "revision": "ed469a44444841e2132b",
-    "url": "/myEHR-website/static/js/1.ed469a44.chunk.js"
+    "revision": "581c15142fb234477240",
+    "url": "/myEHR-website/static/js/1.581c1514.chunk.js"
   },
   {
     "revision": "0dcb318e3618ea0c2ac7",
@@ -48,8 +48,8 @@ self.__precacheManifest = [
     "url": "/myEHR-website/static/media/wyoming.be708452.jpg"
   },
   {
-    "revision": "5ba385971d8c76240ade",
-    "url": "/myEHR-website/static/js/main.5ba38597.chunk.js"
+    "revision": "ed51e328262d2cb1f150",
+    "url": "/myEHR-website/static/js/main.ed51e328.chunk.js"
   },
   {
     "revision": "37ee57bb1aefd044f995212e483febc5",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
     "url": "/myEHR-website/static/media/google-play-badge.db9b21a1.png"
   },
   {
-    "revision": "f3b9c64a71b1acc0411742040f4e72bf",
+    "revision": "e3789a02d8e61b6f9f8d581818111f10",
     "url": "/myEHR-website/index.html"
   }
 ];
