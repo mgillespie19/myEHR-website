@@ -1,0 +1,39 @@
+.secondary-navbar {
+    background-color: rgba(130,0,140);
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    width: 100%;
+    height: 64px;
+    align-items: center;
+}
+.secondary-navbar ul {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    display: flex;
+    margin-right: 10px;
+}
+
+.secondary-navbar li {
+    padding: 0 1.0rem;
+    color: white;
+}
+.secondary-navbar .logo {
+    margin-left: 20px;
+}
+
+.nav-spacing {
+    flex: 1.0;
+}
+
+.navbar-items li:hover {
+    color: orange;
+    text-decoration: none;
+    outline-style: none;
+    cursor: pointer;
+}
+
+.provider-portal a {
+    background-color: rgba(130,0,140);
+}

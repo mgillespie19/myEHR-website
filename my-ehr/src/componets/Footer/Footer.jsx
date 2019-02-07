@@ -14,7 +14,7 @@ const footer = props => (
           </div>
         </div>
         <div className="padding">
-            <p>Copyright @2018 myEHR LLC. All rights reserved. For more information please contact myEHR.tech@gmail.com</p>
+            <p>Copyright @2019 myEHR LLC. All rights reserved. For more information please contact myEHR.tech@gmail.com</p>
         </div>
     </div>
 );

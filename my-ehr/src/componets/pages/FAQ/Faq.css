@@ -4,7 +4,9 @@
     margin-left: 10px;
 }
 
-
+.question-list {
+    margin-bottom: 200px;
+}
 .faq-block {
     display: block;
     width: 90%;
@@ -57,8 +59,12 @@
     color: rgb(80,80,80);
 }
 
-.faq .line-break {
+.faq > .line-break {
     width: 95%;
+    height: 2px;
+}
+.faq .question-list .line-break {
+    width: 90%;
 }
 
 .faq .logo {

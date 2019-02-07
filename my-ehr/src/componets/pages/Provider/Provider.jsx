@@ -16,7 +16,7 @@ class Provider extends Component {
                 </Link>
                 <p>The provider portal is currently under development still, and is not ready for deployment.</p>
                 <div className="button-row">
-                    <Link to="/account/provider"><div className="button">Access Provider Portal</div></Link>
+                    <Link to="/account/provider/portal"><div className="button">Access Provider Portal</div></Link>
                     <Link to="/account/provider/create"><div className="button">Register a Provider Portal</div></Link>
                 </div>
             </div>

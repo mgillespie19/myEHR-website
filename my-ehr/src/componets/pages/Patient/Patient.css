@@ -7,6 +7,8 @@
     background-color: rgb(230,230,230);
     border-radius: 20px;
     margin-bottom: 20px;
+    position: relative;
+
 
 }
 .patient:hover {
@@ -14,6 +16,7 @@
 }
 .patient p {
     font-size: 1.3rem;
+    margin-bottom: 80px;
 }
 
 .patient img {
@@ -58,7 +61,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    bottom: 10px;
 }
 
 
 
+@media screen and (max-width: 641px) {
+    .patient p {
+        margin-bottom: 160px;
+    }
+     
+ }

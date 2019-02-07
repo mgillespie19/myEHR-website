@@ -10,11 +10,11 @@
     width: 50%;
     height: 50%;
     padding: 20px;
-    margin: 50px;
     box-shadow: 0 10px 20px 0 RGBA(0, 0, 0, 0.6);
     background: white;
-
+    margin-bottom: 200px;
 }
+
 
 .patient-login > center{
     padding: 20px;
@@ -30,6 +30,7 @@
     text-align: center;
     width: 90%;
     margin: 10px;
+  
 }
 
 .login-container .button{
@@ -60,5 +61,5 @@
 }
 
 .login-container a{
-    text-decoration: none;
+    color: rgba(106,0,148);
 }

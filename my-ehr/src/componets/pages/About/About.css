@@ -3,7 +3,6 @@
     margin: 0;
     margin-top: 0px;
     padding: 5px 0px;
-    width: 100%;
 }
 
 .about p {
@@ -61,9 +60,17 @@
 }
 .card {
     background-color: white;
-    width: 90%;
-    margin: 50px auto;
+    margin: 50px 50px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 10px 20px 0 RGBA(0, 0, 0, 0.4);
+}
+.about .card .line-break {
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        margin: 50px 15px;        
+    }
 }

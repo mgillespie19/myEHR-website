@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './ProviderPortal.css';
+import ProviderPortalNavbar from './ProviderPortalNavbar';
 //import fire from '../../../../config/fire';
 
 
@@ -12,28 +13,18 @@ class ProviderPortal extends Component {
     }
 
     componentDidMount(){
+        
        //retrieve provider name
        this.setState({
             providerName: "Provider Clinic",
        });
     }
+ 
 
     render() {
         return(
-            <div className="container">
-                <div className="secondary-navbar">
-                    <div className="nav-spacing"/>
-                    <div className="navbar-items">
-                        <ul>
-                            <li>Inbound</li>
-                            <li>Outbound</li>
-                            <li>Settings</li>
-                            <li>Help</li>
-                            <li className="logout">Logout</li>
-                        </ul>
-                    </div>
-                </div>
-
+            <div className="provider-portal">
+                <ProviderPortalNavbar></ProviderPortalNavbar>
                 <div className="dashboard">
                     <div className="side-menu">
                         <ul>
@@ -42,10 +33,9 @@ class ProviderPortal extends Component {
                         </ul>
                     </div>
                     <div className="provider-content">
-                        <h1>Welcome Provider</h1>
+                        <h1>Provider Portal Dashboard</h1>
                     </div>
                 </div>
-                
             </div> 
         );
     }

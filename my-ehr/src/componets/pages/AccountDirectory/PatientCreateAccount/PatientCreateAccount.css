@@ -12,6 +12,7 @@
     padding: 20px;
     box-shadow: 0 10px 20px 0 RGBA(0, 0, 0, 0.6);
     background: white;
+    margin-bottom: 150px;
 
 }
 
@@ -60,4 +61,6 @@
 
 .patient-create-account a{
     text-decoration: none;
+    color: rgba(106,0,148);
+
 }

@@ -18,6 +18,7 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 import fire from './config/fire';
 import ReactGA from 'react-ga';
+import ScrollToTop from 'react-router-scroll-top';
 
 
 const fireAuth = {
@@ -100,26 +101,28 @@ class App extends Component {
 
   render() {
     return (
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
-          <Root aboutRef={this.aboutRef}>
-            <Switch>
-              <Route path="/account/patient/create" component={PatientCreateAccount}/>
-              <Route path= "/account/provider/create" component={ProviderCreateAccount}/>
-              <PrivateRoute path="/account/patient/profile" component={PatientProfile}/>
+        <BrowserRouter basename={process.env.PUBLIC_URL} >
+          <ScrollToTop>
+            <Root aboutRef={this.aboutRef}>
+              <Switch>
+                <Route path="/account/patient/create" component={PatientCreateAccount}/>
+                <Route path= "/account/provider/create" component={ProviderCreateAccount}/>
+                <PrivateRoute path="/account/patient/profile" component={PatientProfile}/>
 
-              {/* Change to private once provider login is set up */}
-              {/* <PrivateRoute path="/account/provider/portal" component={ProviderPortal}/> */}
-              <Route path="/account/provider/portal" component={ProviderPortal}/>
+                {/* Change to private once provider login is set up */}
+                {/* <PrivateRoute path="/account/provider/portal" component={ProviderPortal}/> */}
+                <Route path="/account/provider/portal" component={ProviderPortal}/>
 
-              <Route path="/account/patient" render={ () =><PatientLogin/>}/>
-              <Route path="/account/provider" component={ProviderLogin}/>
-              <Route path="/about" component={About}/>
-              <Route path="/faq" component={Faq}/>
-              <Route path="/team" component={Team}/>
-              <Route path="/account" component={AccountDirectory}/>
-              <Route path="/" render={() => <Home scrollToAbout={this.scrollToAbout}/>}/>
-            </Switch>
-          </Root>
+                <Route path="/account/patient" render={ () =><PatientLogin/>}/>
+                <Route path="/account/provider" component={ProviderLogin}/>
+                <Route path="/about" component={About}/>
+                <Route path="/faq" component={Faq}/>
+                <Route path="/team" component={Team}/>
+                <Route path="/account" component={AccountDirectory}/>
+                <Route path="/" render={() => <Home scrollToAbout={this.scrollToAbout}/>}/>
+              </Switch>
+            </Root>
+          </ScrollToTop>
         </BrowserRouter>
     );
   }
