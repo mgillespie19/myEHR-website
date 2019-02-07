@@ -3,7 +3,7 @@ import './Home.css';
 import {Animated} from "react-animated-css";
 import {Link} from 'react-router-dom';
 
-// import News from "../News/News";
+import News from "../News/News";
 
 
 class Home extends Component {
@@ -25,7 +25,18 @@ class Home extends Component {
         return(
             <div className="container">
 
-                <div className="background">
+                {/* <div className="background">
+                    <div className="home">
+                        <Animated animationIn="fadeInUp" animationOut="fadeOut" isVisible={true}>
+                            <img alt="logo" src={require("../../../assets/images/medicalblock.png")}/>
+                            <div className="mission-statement">
+                                <p><strong>Mission Statement:</strong> "Our goal is to improve patient outcome within the public health sector by democratizing health records with a secure system for everyone."</p>
+                            </div>
+                        </Animated>
+                    </div>
+                </div> */}
+
+                <div className="parallax-background" id="hospital">
                     <div className="home">
                         <Animated animationIn="fadeInUp" animationOut="fadeOut" isVisible={true}>
                             <img alt="logo" src={require("../../../assets/images/medicalblock.png")}/>
@@ -58,6 +69,12 @@ class Home extends Component {
                     </div>
                 </div>
 
+                <div className="parallax-background" id="patientHelp">
+                    <div className="stat">
+                        <p>There are about 950 vendors providing more than 1700 unique certified EHR products</p>
+                    </div>
+                </div>
+
                 <div className="health">
                     <h1>How blockchain can save healthcare</h1>
                     <center>
@@ -67,7 +84,13 @@ class Home extends Component {
                     </center>
                 </div>
 
-                {/* <News></News> */}
+                <div className="parallax-background" id="providerHelp">
+                    <div className="stat">
+                        <p>Tens of millions of dollars given every year to malpractice-related claims. Rate of use-error is 60% in EHR-related malpractice claims</p>
+                    </div>
+                </div>
+
+                <News></News>
 
             </div>
         );

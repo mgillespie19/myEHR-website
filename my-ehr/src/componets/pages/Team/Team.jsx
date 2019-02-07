@@ -76,6 +76,24 @@ class Team extends Component {
 
                         <div className="bio-card">
                             <div className="bio-header">
+                                <h2 className="name">Julia Smith</h2>
+                                <div className="headshot">
+                                    <img src={require("../../../assets/images/headshots/default.jpg")} alt="headshot"/>
+                                </div>
+                            </div>
+                            <p className="bio">
+                            Julia is a sophomore at Washington University in St. Louis and is pursuing a bachelor’s degree 
+                            in Computer Science, as well as a minor in Environmental Studies. She has worked in medical data 
+                            and hospitality, and has also had an internship at KP Pharmaceuticals, a contract medicine and 
+                            vaccine manufacturer. Julia’s interests in computer science lie in design and machine learning, 
+                            and she is an active member of the Washington University Racing Team, which combines these interests. 
+                            In her free time, she enjoys to draw, create video game concepts, code, and work on agricultural 
+                            development.
+                            </p>
+                        </div>
+
+                        <div className="bio-card">
+                            <div className="bio-header">
                                 <h2 className="name">Beverly Pagone</h2>
                                 <div className="headshot">
                                     <img src={require("../../../assets/images/headshots/beverly.png")} alt="headshot"/>

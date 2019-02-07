@@ -1,0 +1,66 @@
+.news {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.section {
+    padding: 20px;
+}
+
+.section .line-break{
+    width: 100%;
+}
+
+.article-background {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center;
+    width: 100%;
+    max-width: 700px;
+    height: 500px;
+}
+.article-background:hover {
+    filter: grayscale(50%);
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    outline: none;
+    color: white;
+}
+.announcements .section-content {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+}
+
+.announcements .article-title {
+    padding: 10px;
+    background-color: rgba(50,50,50,0.5);
+}
+
+.announcements .article-description {
+    padding: 10px;
+    background-color: rgba(100,100,100, 0.9);
+    bottom: 0px;
+    position: absolute;
+
+}
+
+#wyoming {
+    background-image: url("../../../assets/images/wyoming.jpg");
+}
+#rice {
+    background-image: url("../../../assets/images/riceCompetition.jpg");
+}
+#texas {
+    background-image: url("../../../assets/images/texasCompetition.jpg");
+}
+
+@media screen and (max-width: 1024px) {
+    .announcements .section-content {
+        grid-template-columns: auto;
+    }
+}

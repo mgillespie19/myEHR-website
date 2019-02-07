@@ -29,6 +29,19 @@
     margin-bottom: 50px;
     border-radius: 10px;
 }
+.stat {
+    background: rgba(50,50,50,0.85);
+    color: white;
+    padding: 5px 10px;
+    margin: 0px 20px;
+    border-radius: 10px;  
+    position: relative;
+    transform: translate(0%,100%);
+
+}
+.stat p {
+    font-size: 1.3rem;
+}
 
 .mission-statement p {
     font-size: 1.4rem;
@@ -55,19 +68,20 @@
     color: white;
     padding: 20px;
     margin-left: 20px;
+    margin-top: 0px;
 }
 .health{
     width: 100%;
+    min-height: 100vh;
     background-color: rgb(106,0,148);
 }
-
-
 
 
 
 .learn-more {
     width: 100%;
     background-color: white;
+    min-height: 100vh;
 }
 .account-type{
     padding: 20px;
@@ -101,9 +115,41 @@
     text-decoration: none;
     color: black;
 }
+
+.parallax-background {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+    width: 100%;
+
+}
+
+#hospital {
+    background-image: url("../../../assets/images/hospitalBuilding.jpg")
+}
+#patientHelp {
+    background-image: url("../../../assets/images/patientHelp.jpg")
+}
+#providerHelp {
+    background-image: url("../../../assets/images/providerHelp.jpg")
+}
+
 @media screen and (max-width: 600px) {
     .account-type{
         grid-template-columns: auto;
     }
+    .parallax-background {
+        background-attachment: scroll;
+    }
+    .health{
+        min-height: 0vh;
+    }
+    .learn-more {
+        min-height: 0vh;
+    }
+      
 }
 
