@@ -33,7 +33,7 @@
     background: rgba(50,50,50,0.85);
     color: white;
     padding: 5px 10px;
-    margin: 0px 20px;
+    margin: 0px 40px;
     border-radius: 10px;  
     position: relative;
     transform: translate(0%,100%);
@@ -137,6 +137,7 @@
     background-image: url("../../../assets/images/providerHelp.jpg")
 }
 
+
 @media screen and (max-width: 600px) {
     .account-type{
         grid-template-columns: auto;
@@ -149,6 +150,9 @@
     }
     .learn-more {
         min-height: 0vh;
+    }
+    .stat {
+        margin: 0 10px;
     }
       
 }

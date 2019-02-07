@@ -32,7 +32,7 @@ a {
 }
 .announcements .section-content {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     grid-gap: 20px;
 }
 
@@ -59,7 +59,13 @@ a {
     background-image: url("../../../assets/images/texasCompetition.jpg");
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1440px) {
+    .announcements .section-content {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 740px) {
     .announcements .section-content {
         grid-template-columns: auto;
     }

@@ -31,11 +31,11 @@ class Faq extends Component {
                         <div className="faq-block">
                             <div className="question">
                                 <h2>Q.</h2>
-                                <p>Can you build something HIPA compliant?</p>
+                                <p>Can you build something HIPAA compliant?</p>
                             </div>
                             <div className="answer">
                                 <h2>A.</h2>
-                                <p>Short answer yes. Using blockchain ensures the security of the data being stored and makes the system HIPA compliant.</p>
+                                <p>Short answer yes. Using blockchain ensures the security of the data being stored and makes the system HIPAA compliant.</p>
                             </div>
                         </div>
                         <div className="line-break"></div>    
@@ -49,6 +49,18 @@ class Faq extends Component {
                                 <p>Maybe. Our goal is to improve the access of public health records, which would include facilitating communications with all the EMR systems.</p>
                             </div>
                         </div>
+                        <div className="line-break"></div>    
+                        <div className="faq-block">
+                            <div className="question">
+                                <h2>Q.</h2>
+                                <p>Why use blockchain?</p>
+                            </div>
+                            <div className="answer">
+                                <h2>A.</h2>
+                                <p>Using blockchain allows for a secure transfer of medical record data and makes the system HIPAA compliant.</p>
+                            </div>
+                        </div>
+
                     </div>
                 </Animated>
             </div>
