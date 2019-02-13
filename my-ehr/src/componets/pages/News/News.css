@@ -32,7 +32,7 @@ a {
 }
 .announcements .section-content {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
 }
 
@@ -58,15 +58,19 @@ a {
 #texas {
     background-image: url("../../../assets/images/texasCompetition.jpg");
 }
+#newRule {
+    background-image: url("../../../assets/images/newRules.jpeg");
+}
 
 @media screen and (max-width: 1440px) {
     .announcements .section-content {
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
+
     }
 }
 
 @media screen and (max-width: 740px) {
     .announcements .section-content {
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
     }
 }

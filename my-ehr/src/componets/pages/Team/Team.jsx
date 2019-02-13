@@ -129,6 +129,18 @@ class Team extends Component {
                             </p>
                         </div>
 
+                        <div className="bio-card">
+                            <div className="bio-header">
+                                <h2 className="name">Vandan Patel</h2>
+                                <div className="headshot">
+                                    <img src={require("../../../assets/images/headshots/default.jpg")} alt="headshot"/>
+                                </div>
+                            </div>
+                            <p className="bio">
+                            
+                            </p>
+                        </div>
+
 
 
 

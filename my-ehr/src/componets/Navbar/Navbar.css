@@ -36,6 +36,7 @@
    text-decoration: none;
    border-width: 0px;
    font-size: 1.3em;
+   transition: 0.33s;
  }
 
 .navbar-items a:hover {
@@ -48,7 +49,7 @@
 .logo a {
     color: white;
     text-decoration: none;
-    font-size: 1.7rem;
+    font-size: 2.3rem;
     margin-left: 0.5rem;
 }
 

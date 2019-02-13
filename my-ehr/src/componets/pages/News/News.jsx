@@ -35,6 +35,20 @@ class News extends Component {
                         </div> */}
 
                     <div className="section-content">
+                        <a href="https://www.wsj.com/articles/new-rules-could-ease-patients-access-to-their-own-health-records-11549892701?">
+                            <div className="article-background" id="newRule">
+                                <div className="article-title">
+                                    <h3>New Rules Could Ease Patients’ Access to Their Own Health Records</h3>
+                                </div>
+                                <div className="article-description">
+                                    <p>
+                                    Moves are meant to allow patients free access to digital data stored in medical care providers’ 
+                                    electronic health databases
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+
                         <a href="http://soswy.state.wy.us/">
                             <div className="article-background" id="wyoming">
                                 <div className="article-title">
@@ -51,6 +65,7 @@ class News extends Component {
                                 </div>
                             </div>
                         </a>
+
 
                         <a href="https://rbpc.rice.edu/about-rbpc">
                             <div className="article-background" id="rice">
@@ -81,15 +96,16 @@ class News extends Component {
                                 </div>
                             </div>
                         </a>
-                        
+
 
                        
 
 
                     </div>
+  
+
+
                 </div>
-
-
 
             </div>
         );
