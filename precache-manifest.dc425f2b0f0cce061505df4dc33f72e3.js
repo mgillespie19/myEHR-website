@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/myEHR-website/static/media/riceCompetition.b29451c3.jpg"
   },
   {
-    "revision": "ed51e328262d2cb1f150",
-    "url": "/myEHR-website/static/css/main.31ea669a.chunk.css"
+    "revision": "ee00fdc8e590fc2eac56",
+    "url": "/myEHR-website/static/css/main.3db59d9c.chunk.css"
   },
   {
-    "revision": "581c15142fb234477240",
-    "url": "/myEHR-website/static/js/1.581c1514.chunk.js"
+    "revision": "7fa8d052007826c96a08",
+    "url": "/myEHR-website/static/js/1.7fa8d052.chunk.js"
   },
   {
     "revision": "0dcb318e3618ea0c2ac7",
@@ -48,8 +48,12 @@ self.__precacheManifest = [
     "url": "/myEHR-website/static/media/wyoming.be708452.jpg"
   },
   {
-    "revision": "ed51e328262d2cb1f150",
-    "url": "/myEHR-website/static/js/main.ed51e328.chunk.js"
+    "revision": "f0e12dc80f7bafd097ff1bd61ad03f4f",
+    "url": "/myEHR-website/static/media/newRules.f0e12dc8.jpeg"
+  },
+  {
+    "revision": "ee00fdc8e590fc2eac56",
+    "url": "/myEHR-website/static/js/main.ee00fdc8.chunk.js"
   },
   {
     "revision": "37ee57bb1aefd044f995212e483febc5",
@@ -68,12 +72,20 @@ self.__precacheManifest = [
     "url": "/myEHR-website/static/media/louis.ce017184.jpeg"
   },
   {
+    "revision": "15b68a9fd2eb86c4caf801cdaab8d97b",
+    "url": "/myEHR-website/static/media/julia.15b68a9f.jpeg"
+  },
+  {
     "revision": "d572b50e9bb6f45b45ea092eaa8c5bbc",
     "url": "/myEHR-website/static/media/beverly.d572b50e.png"
   },
   {
     "revision": "3fbd187362209528de46316bfb713e2d",
     "url": "/myEHR-website/static/media/chris.3fbd1873.png"
+  },
+  {
+    "revision": "5a54183a39ea2c20c59953859bf46e2f",
+    "url": "/myEHR-website/static/media/vandan.5a54183a.JPG"
   },
   {
     "revision": "acc78cc8db19273751875aeec276a990",
@@ -92,7 +104,7 @@ self.__precacheManifest = [
     "url": "/myEHR-website/static/media/google-play-badge.db9b21a1.png"
   },
   {
-    "revision": "e3789a02d8e61b6f9f8d581818111f10",
+    "revision": "6a94a0d9d32ef7710173b07968c767ea",
     "url": "/myEHR-website/index.html"
   }
 ];
