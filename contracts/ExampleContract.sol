@@ -61,7 +61,7 @@ contract Patient {                  //'contract' keyword is similar to 'class' i
         return patient.age;
     }
 
-    function setAge(uint8 age) public onlyOwner ageRange(uint8 age) { //multiple modifiers are possible, they execute in order from left to right. 
+    function setAge(uint8 age) public onlyOwner ageRange { //multiple modifiers are possible, they execute in order from left to right. 
         PatientRecordModified(msg.sender);
         patient.age = age;
     }
