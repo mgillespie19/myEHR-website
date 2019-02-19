@@ -140,7 +140,7 @@ class Team extends Component {
                             Vandan Patel is a recent graduate of Rensselaer Polytechnic Institute (Class of 2018) where he completed
                             his Bachelors Degree with honors in Computer and Systems Engineering. Over the last 4 years Vandan has worked 
                             with multiple companies ranging from startups to some of the biggest organizations in the world, such as 
-                            Johnson \& Johnson, AT\&T, and Bank of America Merrill Lynch. Through these experiences Vandan has gained much 
+                            Johnson & Johnson, AT&T, and Bank of America Merrill Lynch. Through these experiences Vandan has gained much 
                             knowledge in enterprise best practices, operational excellence, and technical implementation. Vandan is now 
                             looking to take his knowledge and help myEHR become a staple in the healthcare industry.
                             </p>
