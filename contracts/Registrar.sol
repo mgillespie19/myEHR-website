@@ -1,6 +1,8 @@
 /*
+Draft of the Registrar contract which retains the mapping of addresses to patient contracts.
 
-
+Louis Smidt, 2019
+myEHR
 
 */
 
