@@ -26,7 +26,7 @@ contract Patient {                  //'contract' keyword is similar to 'class' i
     uint patient_id;                //Patient's unique ID
     address public patient_addr     //owner of this contact, 
     
-    Patient private patient;
+    Patient patient private;
 
     event PatientRecordAccessed(address sender);        //event listeners for the front end javascript code -- notify of events that happen in blockchain
     event PatientRecordModified(address sender);
@@ -47,7 +47,7 @@ contract Patient {                  //'contract' keyword is similar to 'class' i
     }
 
     function getName() public returns (bytes32){            //Anyone can get the name of the patient.
-        PatientRecordAccessed(msg.sender);                  //trigger the event so that listeners can find it
+        emit PatientRecordAccessed(msg.sender);                  //trigger the event so that listeners can find it
         return patient.name;
     }
 
