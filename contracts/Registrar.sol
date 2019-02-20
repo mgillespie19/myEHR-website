@@ -19,7 +19,6 @@ contract Registrar {
     }
 
     mapping (address => Entity) entityInfo;
-    mapping (address => string) nameAtAddress;
     mapping (address => address) entityAtContract;
     mapping (string => address) entityByName;
 
@@ -27,8 +26,8 @@ contract Registrar {
     //Registrar must be initialized with at least one Entity
     constructor(string memory _name, address contractAddr, string memory _url) public {
         entityInfo[msg.sender] = Entity(_name, contractAddr, _url);
-        nameAtAddress[msg.sender] = _name;
         entityAtContract[contractAddr] = msg.sender;
+        entityByName[_name] = msg.sender;
     } 
 
     function setEntityContractAddr(address contractAddr) public {
