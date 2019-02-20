@@ -74,5 +74,5 @@ contract Entity {
         adminEnabled.push(true);
     }
 
-    
+
 }

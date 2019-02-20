@@ -17,7 +17,7 @@ contract Patient {                  //'contract' keyword is similar to 'class' i
 
     enum Gender { Male, Female, Other} 
 
-    struct Patient {                //group patient info in a struct -- design choice
+    struct Entity {                //group patient info in a struct -- design choice
         string name; 
         uint8 age;                  //8 bit unsigned integer for age
         Gender gender; 
@@ -26,7 +26,7 @@ contract Patient {                  //'contract' keyword is similar to 'class' i
     uint patient_id;                //Patient's unique ID
     address public patient_addr     //owner of this contact, 
     
-    Patient patient private;
+    Entity patient private;
 
     event PatientRecordAccessed(address sender);        //event listeners for the front end javascript code -- notify of events that happen in blockchain
     event PatientRecordModified(address sender);
