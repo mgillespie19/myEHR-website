@@ -1,5 +1,5 @@
 /*
-Draft of the Registrar contract which retains the mapping of addresses to patient contracts.
+Registrar contract enforces mutual trust and retains lookup table of patient addresses
 
 Louis Smidt, 2019
 myEHR
@@ -10,49 +10,49 @@ pragma solidity >=0.5.0 <= 0.6.5;
 
 contract Registrar {
 
-    enum class { Patient, Provider}
+    enum Class { Patient, Provider}
 
     struct Entity {
-        string name;
-        address entityContractAddr;
-        string url;
+        string name;                   //this is an ID
+        address entityContractAddr;   //points to an Entity.sol contract address for a patient
     }
 
-    mapping (address => Entity) entityInfo;
-    mapping (address => address) entityAtContract;
+    mapping (address => Entity) entityInfo;         //
+    mapping (address => address) entityAtContract;  //
     mapping (string => address) entityByName;
 
 
-    //Registrar must be initialized with at least one Entity
-    constructor(string memory _name, address contractAddr, string memory _url) public {
-        entityInfo[msg.sender] = Entity(_name, contractAddr, _url);
-        entityAtContract[contractAddr] = msg.sender;
+    constructor(string memory _name, address _contract_address) public {
+    /*
+    _name --> ID of entity we are registering
+    _contract_address --> address of Entity contract defining registree 
+    _url --> offsite url where info located
+    */
+        entityInfo[msg.sender] = Entity(_name, _contract_address);           //        
+        entityAtContract[_contract_address] = msg.sender;
         entityByName[_name] = msg.sender;
     } 
 
-    function setEntityContractAddr(address contractAddr) public {
-        entityInfo[msg.sender].entityContractAddr = contractAddr;
-        entityAtContract[contractAddr] = msg.sender;
+
+    //Setters
+
+    function setEntityContractAddr(address _contract_address) public {
+        entityInfo[msg.sender].entityContractAddr = _contract_address;
+        entityAtContract[_contract_address] = msg.sender;
     }
 
-    function getEntitytByName(string memory name) public view returns (address) {
-        return entityByName[name];
+
+    //Getters
+
+    function getEntitytByName(string memory _name) public view returns (address) {
+        return entityByName[_name];
     }
 
-    function getEntityName(address addr) public view returns (string memory) {
-        return entityInfo[addr].name;
+    function getEntityName(address _addr) public view returns (string memory) {
+        return entityInfo[_addr].name;
     }
 
-    function getEntityContractAddr(address addr) public view returns (address) {
-        return entityInfo[addr].entityContractAddr;
+    function getEntityContractAddr(address _addr) public view returns (address) {
+        return entityInfo[_addr].entityContractAddr;
     }
-
-    function getEntityHost(address addr) public view returns (string memory) {
-        return entityInfo[addr].url;
-    }
-
-    function setAgentHost(string memory _url) public {
-        entityInfo[msg.sender].url = _url;
-    }
-
 }
