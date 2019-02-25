@@ -206,15 +206,58 @@ Louis Smidt, 2019
 myEHR
 */
 
-contract MedicalRecord {
+contract Asset {
     string public ID;
-    address owner;
-    address author;
-    
-    address[] permitted;
-    bytes32[] hashes;
+    address internal owner;
+    address internal author;
+    string internal pointer;
 
-    string pointer;
+    address[] internal permitted;
+    mapping(address => bytes32) keyMap;
+
     uint256 version;
+
+    modifier isPermitted(){
+        bool permit = false;
+        if (msg.sender == owner || msg.sender == author) {permit = true;}
+
+        if (!permit){
+            for (uint i = 0; i < permitted.length; i++){
+                if (permitted[i] == msg.sender) {permit = true;}
+            }
+        }
+
+        if (!permit) {
+            revert("Message Sender is not Permitted to access this Medical Record.");
+        }
+
+        _;
+
+    }
+
+    constructor(bytes32 author_key, address _owner, bytes32 _author_key) public {
+    /*
+    Asset is instantiated from Provider, then Patient is linked. 
+    */
+        author = msg.sender;
+        permitted.push(msg.sender);
+        keyMap[msg.sender] = author_key;
+        permitted.push();
+    }
+
+
+    function getPointer() public isPermitted returns(string memory) {
+        return pointer;
+    }
+
+    function getKey()
+
+
+}
+
+contract MedicalRecord is Asset {
+    
+
+    
 
 }
