@@ -142,11 +142,19 @@ contract Patient is Entity {
         recordInfo[_new_record_address].ID = _ID;
     }
 
-    function removeRecord(address _addr) public  onlyAdmins{
-        
-    }
+    function unlinkRecord(address _addr) public  onlyAdmins{
+    /*
+    Un-link a record from this patient. Does not delete record. 
+    */
+        for (uint i = 0; i < records.length; i++){
+            if (records[i] == _addr){
+                records[i] = records[records.length-1];
+                delete records[records.length-1];
+                records.length--;
 
-    function 
+            }
+        }
+    }
 
 }
 
