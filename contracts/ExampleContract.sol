@@ -24,9 +24,9 @@ contract Patient {                  //'contract' keyword is similar to 'class' i
     }
 
     uint patient_id;                //Patient's unique ID
-    address public patient_addr     //owner of this contact, 
+    address public patient_addr;     //owner of this contact, 
     
-    Entity patient private;
+    Entity patient;
 
     event PatientRecordAccessed(address sender);        //event listeners for the front end javascript code -- notify of events that happen in blockchain
     event PatientRecordModified(address sender);
