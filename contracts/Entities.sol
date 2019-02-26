@@ -49,7 +49,7 @@ contract Entity {
     }
 
     function toggleEnabled() public onlyAdmins{
-
+        enabled = !enabled;
     }
 
 }
@@ -169,12 +169,12 @@ contract Provider is Entity{
 
 
 
-    struct Patient {
+    struct patient {
         uint256 patient_id;
     }
 
     address[] public patients;
-    mapping(address => Patient) patientsInfo;
+    mapping(address => patient) patientsInfo;
 
     function getPatientAddr(uint256 _id) public view returns(address) {
     /*
@@ -226,23 +226,25 @@ contract Asset {
                 if (permitted[i] == msg.sender) {permit = true;}
             }
         }
-
         if (!permit) {
-            revert("Message Sender is not Permitted to access this Medical Record.");
+            revert("Message Sender is not Permitted to modify this Medical Record.");
         }
 
         _;
-
     }
 
-    constructor(bytes32 author_key, address _owner, bytes32 _author_key) public {
+    constructor(bytes32 _author_key, address _owner, bytes32 _owner_key) public {
     /*
     Asset is instantiated from Provider, then Patient is linked. 
+    Author is the Provider that creates the Record, assumed to be msg.sender
+    Owner is the Patient that manages the Record
     */
         author = msg.sender;
         permitted.push(msg.sender);
-        keyMap[msg.sender] = author_key;
-        permitted.push();
+        keyMap[msg.sender] = _author_key;
+        
+        permitted.push(_owner);
+        keyMap[_owner] = _owner_key;
     }
 
 
@@ -250,14 +252,26 @@ contract Asset {
         return pointer;
     }
 
-    function getKey()
+    function getKey() public isPermitted returns(bytes32){
+        return keyMap[msg.sender]; 
+    }
 
+    function revokePermission(address _addr) public isPermitted {
+        for (uint i = 0; i < permitted.length; i++) {
+            if (permitted[i] == _addr){
+                keyMap[_addr] = 0x00; //send to null for security
+                permitted[i] = permitted[permitted.length-1];
+                delete permitted[permitted.length-1];
+                permitted.length--;
+            }
+        }
+    }
+
+    function givePermission(address _addr, bytes32 _key) public isPermitted {
+        permitted.push(_addr);
+        keyMap[_addr] = _key;
+    }
 
 }
 
-contract MedicalRecord is Asset {
-    
-
-    
-
-}
+contract MedicalRecord is Asset {}
