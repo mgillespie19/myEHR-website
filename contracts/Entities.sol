@@ -7,7 +7,6 @@ myEHR
 
 */
 
-
 pragma solidity >=0.5.0 <0.6.5;
 
 contract Entity {
@@ -27,7 +26,6 @@ contract Entity {
     event EntityModified(address sender);
     event BlockchainError(address sender);
 
-
     // Modifiers
 
     modifier onlyAdmins() {
@@ -45,7 +43,6 @@ contract Entity {
         _;
     }
 
-
     // Functions
 
     function setEntityAddr(address _addr) public onlyAdmins{
@@ -61,7 +58,7 @@ contract Entity {
 
 contract Patient is Entity {
 
-    //Identifying information (later on we wouldn't encode this on the blockchain)
+    //Identifying information (later on we would use an Asset to encode this)
     string first_name;
     string last_name;
     uint256 DOB;
@@ -259,16 +256,25 @@ contract MedicalRecord is Asset {
         asset_ID = _id;
     }
 
+    event RecordAccessed(address sender);
+    event RecordWritten(address sender);
+    event RecordPermissionChanged(address sender);
 
-    function getPointer() public view isPermitted returns(string memory) {
+    function getPointer() public isPermitted returns(string memory) {
+        emit RecordAccessed(msg.sender);
+
         return pointer;
     }
 
-    function getKey() public view isPermitted returns(bytes32){
+    function getKey() public isPermitted returns(bytes32){
+        emit RecordAccessed(msg.sender);
+
         return keyMap[msg.sender]; 
     }
 
     function revokePermission(address _addr) public isPermitted {
+        emit RecordPermissionChanged(msg.sender);
+
         for (uint i = 0; i < permitted.length; i++) {
             if (permitted[i] == _addr){
                 keyMap[_addr] = 0x00; //send to null for security
@@ -280,6 +286,8 @@ contract MedicalRecord is Asset {
     }
 
     function givePermission(address _addr, bytes32 _key) public isPermitted {
+        emit RecordPermissionChanged(msg.sender);
+
         permitted.push(_addr);
         keyMap[_addr] = _key;
     }
