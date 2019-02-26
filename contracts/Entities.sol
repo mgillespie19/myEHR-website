@@ -36,8 +36,12 @@ contract Entity {
     */
         bool isAdmin = false;
 
-        if (enabled && msg.sender == addr) { isAdmin = true; }
-        if(!isAdmin){ revert("Transaction Reverted: Message Sender address is not the owner of this entity."); }
+        if (enabled && msg.sender == addr) {
+            isAdmin = true; 
+            }
+        if(!isAdmin) {
+            revert("Transaction Reverted: Message Sender address is not the owner of this entity."); 
+            }
         _;
     }
 
@@ -85,7 +89,9 @@ contract Patient is Entity {
     */
         bool isAdmin;
 
-        if (enabled && msg.sender == addr) { isAdmin = true; }
+        if (enabled && msg.sender == addr) {
+            isAdmin = true;
+            }
 
         for (uint i = 0; i < admins_addrs.length; i++) {
             if (msg.sender == admins_addrs[i]) {
@@ -93,7 +99,9 @@ contract Patient is Entity {
                 break;
             }
         }
-        if(!isAdmin){ revert("Transaction Reverted: Message Sender address is not an authorized Administrator for this Patient's records"); }
+        if(!isAdmin){ 
+            revert("Transaction Reverted: Message Sender address is not an authorized Administrator for this Patient's records"); 
+        }
         _;
     }
 
@@ -167,8 +175,6 @@ contract Provider is Entity{
 
     string provider_name;
 
-
-
     struct patient {
         uint256 patient_id;
     }
@@ -193,10 +199,8 @@ contract Provider is Entity{
     */
         return patients;
     }
-    
 
 }
-
 
 
 /*
@@ -207,7 +211,13 @@ myEHR
 */
 
 contract Asset {
-    string public ID;
+    string public asset_ID;
+
+}
+
+
+contract MedicalRecord is Asset {
+
     address internal owner;
     address internal author;
     string internal pointer;
@@ -233,7 +243,7 @@ contract Asset {
         _;
     }
 
-    constructor(bytes32 _author_key, address _owner, bytes32 _owner_key) public {
+    constructor(bytes32 _author_key, address _owner, bytes32 _owner_key, string memory _id) public {
     /*
     Asset is instantiated from Provider, then Patient is linked. 
     Author is the Provider that creates the Record, assumed to be msg.sender
@@ -245,14 +255,16 @@ contract Asset {
         
         permitted.push(_owner);
         keyMap[_owner] = _owner_key;
+
+        asset_ID = _id;
     }
 
 
-    function getPointer() public isPermitted returns(string memory) {
+    function getPointer() public view isPermitted returns(string memory) {
         return pointer;
     }
 
-    function getKey() public isPermitted returns(bytes32){
+    function getKey() public view isPermitted returns(bytes32){
         return keyMap[msg.sender]; 
     }
 
@@ -273,5 +285,3 @@ contract Asset {
     }
 
 }
-
-contract MedicalRecord is Asset {}
