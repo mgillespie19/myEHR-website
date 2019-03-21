@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/myEHR-website/static/media/riceCompetition.b29451c3.jpg"
   },
   {
-    "revision": "a42260c135aba962e4ab",
-    "url": "/myEHR-website/static/css/main.7b5662c1.chunk.css"
+    "revision": "54922e8abbe5a8a8f15a",
+    "url": "/myEHR-website/static/css/main.f380266f.chunk.css"
   },
   {
     "revision": "d166f177017132998790",
@@ -52,8 +52,8 @@ self.__precacheManifest = [
     "url": "/myEHR-website/static/media/newRules.f0e12dc8.jpeg"
   },
   {
-    "revision": "a42260c135aba962e4ab",
-    "url": "/myEHR-website/static/js/main.a42260c1.chunk.js"
+    "revision": "54922e8abbe5a8a8f15a",
+    "url": "/myEHR-website/static/js/main.54922e8a.chunk.js"
   },
   {
     "revision": "37ee57bb1aefd044f995212e483febc5",
@@ -104,7 +104,7 @@ self.__precacheManifest = [
     "url": "/myEHR-website/static/media/google-play-badge.db9b21a1.png"
   },
   {
-    "revision": "dd476a08e32041a974cce4f0edc8304b",
+    "revision": "472ffdbb1a10d56868d8cf76466abc08",
     "url": "/myEHR-website/index.html"
   }
 ];
