@@ -1,7 +1,7 @@
 .footer {
     margin: 0px;
     width: 100%;
-    background-color: rgba(106,0,148);
+    background-color: var(--primary);
 }
 .padding {
     padding: 5px 20px;

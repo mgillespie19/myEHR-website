@@ -1,6 +1,7 @@
 .side-drawer {
     height: 100%;
-    background: white;
+    background: var(--background-primary);
+    box-shadow: 1px 0px 1px rgba(0, 0, 0);
     box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 64px;
@@ -23,17 +24,17 @@
 
 .side-drawer li {
     margin: 0.5rem 0;
-    color: rgba(106,0,148);
+    color: var(--primary);
     font-size: 1.3rem;
 }
 
 .side-drawer a{
-    color: rgba(106,0,148);
+    color: var(--primary);
     text-decoration: none;
 }
 
 .side-drawer a:hover, .side-drawer a:active {
-    color: orange;
+    color: var(--secondary);
     text-decoration: none;
 }
 

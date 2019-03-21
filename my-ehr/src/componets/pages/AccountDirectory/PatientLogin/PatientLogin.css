@@ -1,8 +1,7 @@
 .patient-login{
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgba(106,0,148), rgba(130,0,140),rgba(106,0,148));
-
+    background-image: linear-gradient(var(--primary), var(--primary-accent),var(--primary));
 }
 .login-container {
     min-width: 300px;
@@ -10,7 +9,8 @@
     width: 50%;
     height: 50%;
     padding: 20px;
-    box-shadow: 0 10px 20px 0 RGBA(0, 0, 0, 0.6);
+    box-shadow: 0 1px 2px 0 rgb(0, 0, 0);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);
     background: white;
     margin-bottom: 200px;
 }
@@ -21,7 +21,7 @@
 }
 
 .login-container h2{
-    color: purple;
+    color: var(--primary);
     text-align: center;
 }
 
@@ -38,11 +38,12 @@
     text-align: center;
     width: 90%;
     margin: 10px;
-    background: purple;
+    background: var(--primary-accent);
     color: white;
     border-radius: 15px;
     height: 30px;
-    box-shadow: 0 8px 16px 0 RGBA(0, 0, 0, 0.5);
+    box-shadow: 0 1px 2px 0 rgb(0, 0, 0);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
     text-align: center;
     padding-top: 5px;
 }
@@ -52,6 +53,7 @@
 }
 
 .login-container .button:active{
+    box-shadow: 0 1px 2px 0 rgb(0, 0, 0);
     box-shadow: 0 8px 16px 0 RGBA(0, 0, 0, 0.2);
 }
 
@@ -61,5 +63,5 @@
 }
 
 .login-container a{
-    color: rgba(106,0,148);
+    color: var(--primary);
 }

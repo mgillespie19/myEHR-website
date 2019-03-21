@@ -1,5 +1,5 @@
 .secondary-navbar {
-    background-color: rgba(130,0,140);
+    background-color: var(--primary-accent);
     position: fixed;
     z-index: 100;
     display: flex;
@@ -28,12 +28,12 @@
 }
 
 .navbar-items li:hover {
-    color: orange;
+    color: var(--secondary);
     text-decoration: none;
     outline-style: none;
     cursor: pointer;
 }
 
 .provider-portal a {
-    background-color: rgba(130,0,140);
+    background-color: var(--primary-accent);
 }

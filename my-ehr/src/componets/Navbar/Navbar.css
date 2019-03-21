@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(106,0,148);
+    background-color: var(--primary);
     height: 64px;
     z-index: 100;
 }
@@ -31,7 +31,7 @@
 }
 
  .navbar-items a {
-   background-color: rgba(106,0,148);
+   background-color: var(--primary);
    color: white;
    text-decoration: none;
    border-width: 0px;
@@ -40,7 +40,7 @@
  }
 
 .navbar-items a:hover {
-    color: orange;
+    color: var(--secondary);
     text-decoration: none;
     outline-style: none;
     cursor: pointer;

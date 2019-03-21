@@ -3,6 +3,9 @@
     padding-top: 45px;
     margin-left: 10px;
 }
+.faq {
+    background-color: var(--background-secondary);
+}
 
 .question-list {
     margin-bottom: 200px;
@@ -33,13 +36,13 @@
     height: auto;
     min-height: 68px;
     background-color: rgb(200,200,200);
-    border-left: solid rgba(106,0,148) 5px;
+    border-left: solid var(--primary) 5px;
     padding: 0px;
     margin: 0px;
     margin-bottom: -22px;
 }
 .question h2 {
-    color: rgba(106,0,148);
+    color: var(--primary);
 }
 .question p {
     font: bold;

@@ -7,7 +7,7 @@
 
 .dashboard {
     display: flex;
-    background-color: rgb(230,230,230);
+    background-color: var(--background-primary);
 }
 .provider-content {
 
@@ -16,7 +16,7 @@
 .side-menu{
     height: 100vh;
     margin: 0;
-    background-color: rgba(130,0,140);
+    background-color: var(--primary-accent);
 }
 .provider-content h1{
     padding: 50px;

@@ -1,5 +1,5 @@
 .team {
-    background-image: linear-gradient(rgba(106,0,148), rgba(130,0,140),rgba(106,0,148));
+    background-image: linear-gradient(var(--primary), var(--primary-accent),var(--primary));
     height: 100%;
     width: 100%;
 }
@@ -24,12 +24,13 @@
 .bio-card{
     margin: 20px auto;
     padding: 10px;
-    background-color: white;
+    background-color: var(--background-secondary);
     border-radius: 5%;
     width: 30vw;
     min-width: 300px;
     max-width: 450px;
-    box-shadow: 0 10px 20px 0 RGBA(0, 0, 0, 0.4);
+    box-shadow: 0 10px 20px 0 rgb(0, 0, 0);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
 }
 .name {
     display: inline-block;
@@ -42,7 +43,7 @@
     height: 140px;
     float: left;
     display: inline-block;
-    background-image: linear-gradient(to bottom left, rgba(106,0,148), orange);
+    background-image: linear-gradient(to bottom left, var(--primary), var(--secondary));
     border-radius: 80px;
 }
 .bio-card img {
@@ -50,7 +51,7 @@
     height: 128px;
     margin: 4px;
     padding: 2px;
-    background-color: white;
+    background-color: var(--background-secondary);
     border-radius: 64px;
 
 }

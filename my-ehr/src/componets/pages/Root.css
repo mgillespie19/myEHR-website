@@ -3,6 +3,21 @@
     src: local('geo_sans_light'), url(../../assets/fonts/geo_sans_light/GeosansLight.ttf) format('ttf');
 }
 
+:root {
+    /* Main colors used  for the website */
+    --primary: rgb(106,0,148);
+    /* Meant to be a slightly brighter color for buttons and gradients */
+    --primary-accent: rgb(130,0,140);
+
+    /* Colors for complimenting the other colors on the page */
+    --secondary: rgb(252, 166, 6);
+    --secondary-accent: rgb(253, 183, 52);
+
+    /* Colors used for the background */
+    --background-primary: rgb(240, 240, 240);
+    --background-secondary: rgb(255,255,255);
+}
+
 .app{
     font-family: "Lato", "sans-serif";
     height: 100%;
@@ -12,13 +27,14 @@
 }
 
 .container {
+    background-color: var(--background-primary);
     margin-top: 64px;
 }
 .line-break {
     height: 1px;
     width: 90%;
     margin: 20px auto;
-    background-color: rgb(200, 200, 200);
+    background-color: rgb(150,150,150);
 
 }
 .hidden {
@@ -26,5 +42,6 @@
 }
 .card {
     border-radius: 10px;
-    box-shadow: 0 10px 20px 0 RGBA(0, 0, 0, 0.4);
+    box-shadow: 0 1px 2px 0 rgb(0, 0, 0);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
 }
