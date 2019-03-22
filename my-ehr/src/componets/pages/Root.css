@@ -9,6 +9,10 @@
     /* Meant to be a slightly brighter color for buttons and gradients */
     --primary-accent: rgb(130,0,140);
 
+    --primary: rgb(70, 85, 160);
+    --primary-accent: rgb(100, 105, 200);
+
+
     /* Colors for complimenting the other colors on the page */
     --secondary: rgb(252, 166, 6);
     --secondary-accent: rgb(253, 183, 52);
