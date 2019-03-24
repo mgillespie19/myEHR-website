@@ -1,5 +1,5 @@
 .secondary-navbar {
-    background-color: var(--primary-accent);
+    background-color: var(--primary);
     position: fixed;
     z-index: 100;
     display: flex;
@@ -36,5 +36,5 @@
 }
 
 .provider-portal a {
-    background-color: var(--primary-accent);
+    background-color: var(--primary);
 }
