@@ -10,7 +10,7 @@
     --primary-accent: rgb(130,0,140);
 
     --primary: rgb(45, 69, 132);
-    --primary-accent: rgb(100, 105, 200);
+    --primary-accent: rgb(55, 70, 125);
 
 
     /* Colors for complimenting the other colors on the page */
@@ -35,7 +35,7 @@
     margin-top: 64px;
 }
 .line-break {
-    height: 1px;
+    height: 0.5px;
     width: 90%;
     margin: 20px auto;
     background-color: rgb(150,150,150);
@@ -47,5 +47,5 @@
 .card {
     border-radius: 10px;
     box-shadow: 0 1px 2px 0 rgb(0, 0, 0);
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 3px 3px 0 rgba(0, 0, 0, 0.2);
 }
