@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "149c580f80c91c5cc229",
-    "url": "/myEHR-website/static/css/main.816b78bd.chunk.css"
+    "revision": "f4fc720ac5253010ef2d",
+    "url": "/myEHR-website/static/css/main.2556db03.chunk.css"
   },
   {
-    "revision": "149c580f80c91c5cc229",
-    "url": "/myEHR-website/static/js/main.149c580f.chunk.js"
+    "revision": "f4fc720ac5253010ef2d",
+    "url": "/myEHR-website/static/js/main.f4fc720a.chunk.js"
   },
   {
     "revision": "d166f177017132998790",
@@ -108,7 +108,7 @@ self.__precacheManifest = [
     "url": "/myEHR-website/static/media/google-play-badge.db9b21a1.png"
   },
   {
-    "revision": "dcf9b553e27a8538c4122f54622d92b6",
+    "revision": "f820bf51eb45ebf9c2c2351a16757322",
     "url": "/myEHR-website/index.html"
   }
 ];
