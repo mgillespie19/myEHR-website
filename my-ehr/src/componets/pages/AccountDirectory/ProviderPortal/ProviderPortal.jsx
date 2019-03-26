@@ -85,22 +85,28 @@ class ProviderPortal extends Component {
 
         const request_data = [{
             name: 'Roy Agasthyan',
-            status: 'Approved'
+            status: 'Approved',
+            date: '2019-03-08'
           },{
             name: 'Sam Thomason',
-            status: 'Pending'
+            status: 'Pending',
+            date: '2018-04-19'
           },{
             name: 'Michael Jackson',
-            status: 'Pending'
+            status: 'Pending',
+            date: '2018-06-04'
           },{
             name: 'Samuel Roy',
-            status: 'Approved'
+            status: 'Approved',
+            date: '2019-02-11'
           },{
             name: 'Rima Soy',
-            status: 'Denied'
+            status: 'Denied',
+            date: '2018-09-23'
           },{
             name: 'Suzi Eliamma',
-            status: 'Pending'
+            status: 'Pending',
+            date: '2019-01-17'
           },
         
         
@@ -112,6 +118,9 @@ class ProviderPortal extends Component {
           },{
             Header: 'Request Status',
             accessor: 'status'
+          },{
+            Header: 'Date',
+            accessor: 'date'
           }];
 
 
