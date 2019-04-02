@@ -14,7 +14,7 @@
 
 .provider-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     padding: 0px 20px;
     margin: 0px;
@@ -26,17 +26,23 @@
 
 .transaction-count-table {
     margin-top: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: block;
 }
 
 
 .transaction-count-table ul {
     list-style: none;
+    width: 200px;
+    margin: 0 auto;
+    padding-left: 0;
+    
 }
 .transaction-count-table ul li {
-    padding: 5px;
+    padding: 10px;
     font-size: 20px;
+}
+.transaction-count-table ul li strong {
+    float: right
 }
 
 .provider-header {
@@ -86,7 +92,7 @@
 
 @media screen and (max-width: 1024px) {
     .provider-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
    
 }
