@@ -83,7 +83,7 @@ class ProviderPortal extends Component {
 
     render() {
 
-        const request_data = [{
+        const inbound_request_data = [{
             name: 'Roy Agasthyan',
             status: 'Approved',
             date: '2019-03-08'
@@ -111,6 +111,45 @@ class ProviderPortal extends Component {
         
         
         ];
+        const outbound_request_data = [{
+            name: 'James Bond',
+            status: 'Pending',
+            date: '2019-10-18'
+          },{
+            name: 'Sam Thomason',
+            status: 'Pending',
+            date: '2018-11-19'
+          },{
+            name: 'Michael Jackson',
+            status: 'Pending',
+            date: '2018-06-14'
+          },{
+            name: 'Samuel Roy',
+            status: 'Pending',
+            date: '2019-01-21'
+          },{
+            name: 'Rima Soy',
+            status: 'Denied',
+            date: '2018-09-03'
+          },{
+            name: 'Suzi Eliamma',
+            status: 'Approved',
+            date: '2018-01-17'
+          },
+          {
+            name: 'Mo Farah',
+            status: 'Approved',
+            date: '2018-06-19'
+          },
+          {
+            name: 'Smith Jones',
+            status: 'Approved',
+            date: '2018-04-07'
+          },
+        
+        
+        ];
+
 
         const request_columns = [{
             Header: 'Patient Name',
@@ -140,26 +179,14 @@ class ProviderPortal extends Component {
                             <div className="transaction-count-table">
                                 <div className="transaction-label">
                                     <ul className="approved">
-                                        <li>Approved:</li>
+                                        <li>Approved: <strong>{this.state.approved_count}</strong></li>
                                     </ul>
                                     <ul className="pending">
-                                        <li>Pending:</li>
+                                        <li>Pending:  <strong>{this.state.pending_count}</strong></li>
                                     </ul>
                                     <ul className="denied">
-                                        <li>Denied:</li>
+                                        <li>Denied:  <strong>{this.state.denied_count}</strong></li>
                                     </ul>
-                                </div>
-                                <div>
-                                    <ul>
-                                        <li>{this.state.approved_count}</li>
-                                    </ul>
-                                    <ul>
-                                        <li>{this.state.pending_count}</li>
-                                    </ul>
-                                    <ul>
-                                        <li>{this.state.denied_count}</li>
-                                    </ul>
-
                                 </div>
 
                             </div>
@@ -171,10 +198,65 @@ class ProviderPortal extends Component {
 
                             
                         </div>
-                        <div className="card transaction-card">
+                        <div className="card transaction-card" id="inbound-request-list">
+                            <h2>Inbound</h2>
                             <div>
                                 <ReactTable
-                                    data={request_data}
+                                    data={inbound_request_data}
+                                    columns={request_columns}
+                                    defaultPageSize = {10}
+                                    pageSizeOptions = {[10, 25, 50]}
+                                    className = {'-highlight'}
+                                    resizable = {false}
+                                    getTrProps={(state, rowInfo) => {
+                                        if(rowInfo !== undefined && rowInfo.row !== undefined){
+                                            var status_color = "white";
+                                            switch(rowInfo.row.status){
+                                                case "Approved":
+                                                    if(!transaction_count_flag){
+                                                        this.state.approved_count++;
+                                                    }
+                                                    status_color = "rgb(210, 245, 200)";
+                                                    break;
+                                                case "Denied":
+                                                    if(!transaction_count_flag){
+                                                        this.state.denied_count++;
+                                                    }
+                                                    status_color = "rgb(255, 210, 210)";
+                                                    break;
+                                                case "Pending":
+                                                    if(!transaction_count_flag){
+                                                        this.state.pending_count++;
+                                                    }
+                                                    status_color = "rgb(255, 250, 210)";
+                                                    break;
+                                                default:
+                                                status_color = "white";
+
+                                            }
+                                            return {
+                                                style: {
+                                                  background: status_color
+                                                }
+                                              };
+                                        } else {
+                                            return {
+                                                style: {
+                                                  background: "white"
+                                                }
+                                              };
+                                        }
+                                        
+                                      }}
+                                />
+                            </div>
+
+                        </div>
+                        <div className="card transaction-card" id="outbound-request-list">
+                            <h2>Outbound</h2>
+                            <div>
+                                <ReactTable
+                                    data={outbound_request_data}
                                     columns={request_columns}
                                     defaultPageSize = {10}
                                     pageSizeOptions = {[10, 25, 50]}
