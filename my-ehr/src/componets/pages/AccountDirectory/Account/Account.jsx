@@ -12,10 +12,9 @@ class Account extends Component {
         return(
             <div className="container">
                 <div className="title">
-                    <img className="logo" alt="logo" src={require("../../../../assets/images/medicalblock.png")}/>
                     <h1>Select an Account Type</h1>
                     <p>myEHR offers two account types, one for patients and the other for providers. Please select an account type.</p>
-                    <div className="line-break"></div> 
+                    <div className="line-break"></div>
                 </div>
                 <div className="account">
                     {/* <Link to='/account/patient'>
