@@ -72,9 +72,7 @@ class Home extends Component {
 
                 <div className="parallax-background" id="patientHelp">
                     <div className="stat">
-                        <center>
                         <p>There are about 950 vendors providing more than 1700 unique certified EHR products</p>
-                        </center>
                     </div>
                 </div>
 
