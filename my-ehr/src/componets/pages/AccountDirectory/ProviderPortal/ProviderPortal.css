@@ -31,10 +31,10 @@
 
 
 .transaction-count-table ul {
+    flex: 1.0;
     list-style: none;
-    width: 200px;
+    padding: 0 30px;
     margin: 0 auto;
-    padding-left: 0;
     
 }
 .transaction-count-table ul li {
@@ -56,7 +56,7 @@
 .account-total-card {
     text-align: center;
     max-width: 300px;
-    max-height: 250px;
+    max-height: 400px;
     margin: 0px;
 }
 .transaction-count-table .transaction-label {
@@ -86,6 +86,34 @@
 .pending li{
     background-color: rgb(255, 250, 210);
 }
+
+.provider-content .button{
+    display: block;
+    flex: 1.0;
+    background-color: var(--primary-accent);
+    color: white;
+    width: 250px;
+    height: 50px;
+    margin: 30px;
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 1px 2px 0 rgb(0, 0, 0);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+.provider-content .button:hover{
+    -webkit-filter: brightness(0.95);
+    filter: brightness(0.95);
+}
+
+.provider-content .button:active {
+    box-shadow: 0 1px 2px 0 rgb(0, 0, 0);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
 
 
 

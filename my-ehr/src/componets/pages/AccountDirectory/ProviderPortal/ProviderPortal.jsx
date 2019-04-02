@@ -79,6 +79,19 @@ class ProviderPortal extends Component {
         console.log("unmount");
         
     }
+
+
+    outboundRequest = (event) => {
+        event.preventDefault();
+
+        console.log("Outbound request button clicked");
+    }
+
+    importPatientList = (event) => {
+        event.preventDefault();
+
+        console.log("Import patients button clicked");
+    }
  
 
     render() {
@@ -190,14 +203,11 @@ class ProviderPortal extends Component {
                                 </div>
 
                             </div>
-
-
-
-                            
-              
-
-                            
+                        
+                            <div className="button" onClick={this.outboundRequest}>New Outbound Request</div>
+                            <div className="button" onClick={this.importPatientList}>Import List of Patients</div>
                         </div>
+
                         <div className="card transaction-card" id="inbound-request-list">
                             <h2>Inbound</h2>
                             <div>
