@@ -28,7 +28,7 @@ class Navbar extends Component {
                     <div className="hamburger-menu">
                         <HamburgerMenu click={this.state.toggleSideDrawer} showSideDrawer={this.state.showSideDrawer} />
                     </div>
-                    <div className="logo"><Link to='/'>myEHR</Link></div>
+                    <div className="logo"><img alt="myEHR" src={require("../../assets/images/medicalblock.png")} /><Link to='/'> myEHR </Link></div>
                     <div className="nav-spacing"/>
                     <div className="navbar-items">
                         <ul>

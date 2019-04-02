@@ -14,7 +14,7 @@ class Home extends Component {
         }
         this.aboutRef = props.aboutRef;
     }
-    
+
     componentDidMount(){
         this.setState(state => ({
             showMainContent: true
@@ -30,7 +30,7 @@ class Home extends Component {
                         <Animated animationIn="fadeInUp" animationOut="fadeOut" isVisible={true}>
                             <img alt="logo" src={require("../../../assets/images/medicalblock.png")}/>
                             <div className="mission-statement">
-                                <p><strong>Mission Statement:</strong> "Our goal is to improve patient outcome within the public health sector by democratizing health records with a secure system for everyone."</p>
+                                <p>empowering providers, democratizing records</p>
                             </div>
                         </Animated>
                     </div>
@@ -39,10 +39,12 @@ class Home extends Component {
                 <div className="parallax-background" id="hospital">
                     <div className="home">
                         <Animated animationIn="fadeInUp" animationOut="fadeOut" isVisible={true}>
-                            <img alt="logo" src={require("../../../assets/images/medicalblock.png")}/>
-                            <div className="mission-statement">
-                                <p><strong>Mission Statement:</strong> "Our goal is to improve patient outcome within the public health sector by democratizing health records with a secure system for everyone."</p>
-                            </div>
+                          <div className="mission-statement">
+                            <p>Empowering Healthcare Providers,</p>
+                            <p>Democratizing Patient Records</p>
+                            {/* <img alt="logo" src={require("../../../assets/images/medicalblock.png")}/>*/}
+                          </div>
+
                         </Animated>
                     </div>
                 </div>

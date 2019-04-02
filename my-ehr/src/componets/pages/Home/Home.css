@@ -22,29 +22,31 @@
 }
 
 .mission-statement {
-    background: rgba(50,50,50,0.85);
+    background: rgba(50,50,50,0.2);
     color: white;
-    padding: 5px 10px;
-    margin: 0px 20px;
-    margin-bottom: 50px;
+    position: relative;
+    padding: 1px 0px;
+    margin: 10px 10px;
     border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 .stat {
     background: rgba(50,50,50,0.85);
     color: white;
     padding: 5px 10px;
     margin: 0px 40px;
-    border-radius: 10px;  
+    border-radius: 10px;
     position: relative;
     transform: translate(0%,100%);
-
 }
 .stat p {
     font-size: 1.3rem;
 }
 
 .mission-statement p {
-    font-size: 1.4rem;
+    font-size: 4rem;
+    font-weight: lighter;
 }
 
 .mission-statement strong {
@@ -155,6 +157,5 @@
     .stat {
         margin: 0 10px;
     }
-      
-}
 
+}
