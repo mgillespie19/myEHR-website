@@ -12,9 +12,8 @@ class Faq extends Component {
     render() {
         return(
             <div className="faq">
-                <img className="logo" alt="logo" src={require("../../../assets/images/medicalblock.png")}/>
                 <h1 ref={this.faqRef}>Frequently Asked Questions (FAQ)</h1>
-                <div className="line-break"></div> 
+                <div className="line-break"></div>
                 <Animated animationIn="bounceInRight" animationOut="bounceOutLeft" isVisible={true}>
                     <div className="question-list">
                         <div className="faq-block">
@@ -27,7 +26,7 @@ class Faq extends Component {
                                 <p>It is a system that stores transactions in a decentralized peer to peer network.</p>
                             </div>
                         </div>
-                        <div className="line-break"></div> 
+                        <div className="line-break"></div>
                         <div className="faq-block">
                             <div className="question">
                                 <h2>Q.</h2>
@@ -38,7 +37,7 @@ class Faq extends Component {
                                 <p>Short answer yes. Using blockchain ensures the security of the data being stored and makes the system HIPAA compliant.</p>
                             </div>
                         </div>
-                        <div className="line-break"></div>    
+                        <div className="line-break"></div>
                         <div className="faq-block">
                             <div className="question">
                                 <h2>Q.</h2>
@@ -49,7 +48,7 @@ class Faq extends Component {
                                 <p>Maybe. Our goal is to improve the access of public health records, which would include facilitating communications with all the EMR systems.</p>
                             </div>
                         </div>
-                        <div className="line-break"></div>    
+                        <div className="line-break"></div>
                         <div className="faq-block">
                             <div className="question">
                                 <h2>Q.</h2>
