@@ -65,6 +65,14 @@
     .navbar-items {
         display: none;
     }
+
+    .logo img {
+      display: none;
+    }
+
+    .home img {
+      display: none;
+    }
 }
 @media screen and (min-width: 600px) {
     .hamburger-menu{
