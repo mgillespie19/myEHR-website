@@ -42,9 +42,8 @@ class Home extends Component {
                           <div className="mission-statement">
                             <p>Empowering Healthcare Providers,</p>
                             <p>Democratizing Patient Records</p>
-                            {/* <img alt="logo" src={require("../../../assets/images/medicalblock.png")}/>*/}
                           </div>
-
+                          <img alt="logo" src={require("../../../assets/images/medicalblock.png")}/>
                         </Animated>
                     </div>
                 </div>
