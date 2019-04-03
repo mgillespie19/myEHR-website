@@ -22,6 +22,7 @@ function proccessPatientData(xml_data){
     return json_data;
 }
 
+
 class ProviderPortal extends Component {
     constructor(){
         super();
@@ -31,6 +32,9 @@ class ProviderPortal extends Component {
             pending_count: 0,
             denied_count: 0,
             data: null,
+            show_patient_modal: {
+                display: 'none'
+            }
             
         }
          
@@ -56,6 +60,16 @@ class ProviderPortal extends Component {
             providerName: "Provider",
     
        });
+
+    //    //check if there is a click outside the modal and close it
+    //    window.addEventListener('click', function (event) {
+    //        if(document.getElementById("view-patient-modal").style.display === "block"){
+    //         if(!event.path.includes(document.getElementById("view-patient-modal").firstChild)){
+    //             document.getElementById("view-patient-modal").style.display = "none";
+
+    //         }
+    //        }
+    //    });
        console.log("Mounted");
 
     }
@@ -92,7 +106,54 @@ class ProviderPortal extends Component {
 
         console.log("Import patients button clicked");
     }
- 
+
+    viewInboundPatientRequest = (rowInfo) => {
+            console.log("viewInboundPatientRequest");
+            console.log(rowInfo.name + " clicked");
+            console.log(rowInfo.status);
+            console.log(rowInfo.date);
+
+            this.viewPatientModal(rowInfo);
+        
+    }
+
+    viewOutboundPatientRequest = (rowInfo) => {
+
+        console.log("viewOutboundPatientRequest");
+        console.log(rowInfo.name + " clicked");
+        this.viewPatientModal(rowInfo);
+
+    }
+
+
+    closeViewPatientModal = () => {
+        this.setState({ 
+            show_patient_modal: {
+                display: 'none'
+            }
+        });
+        document.getElementById("view-patient-name").innerHTML = "";
+        document.getElementById("view-patient-status").innerHTML = "";
+        document.getElementById("view-patient-date").innerHTML = "";
+    }
+    viewPatientModal = (rowInfo) => {
+        
+        this.setState({ 
+            show_patient_modal: {
+                display: 'block'
+            }
+        });
+        console.log("hello "+ rowInfo.name);
+        document.getElementById("view-patient-name").innerHTML = rowInfo.name;
+        document.getElementById("view-patient-status").innerHTML = rowInfo.status;
+        document.getElementById("view-patient-date").innerHTML = rowInfo.date;
+    
+    
+    }
+
+   
+
+    
 
     render() {
 
@@ -218,6 +279,30 @@ class ProviderPortal extends Component {
                                     pageSizeOptions = {[10, 25, 50]}
                                     className = {'-highlight'}
                                     resizable = {false}
+                                    getTdProps={(state, rowInfo) => {
+                                        if(rowInfo !== undefined && rowInfo.row !== undefined){
+
+                                        return {
+                                          onClick: (e, handleOriginal) => {
+                                            this.viewPatientModal(rowInfo.row);
+                                     
+                                            if (handleOriginal) {
+                                              handleOriginal();
+                                            }
+                                          }
+                                        };
+                                    } else {
+                                        return {
+                                            onClick: (e, handleOriginal) => {
+                                              if (handleOriginal) {
+                                                handleOriginal();
+                                              }
+                                            }
+                                          };
+
+                                    }
+                                      
+                                    }}
                                     getTrProps={(state, rowInfo) => {
                                         if(rowInfo !== undefined && rowInfo.row !== undefined){
                                             var status_color = "white";
@@ -261,6 +346,8 @@ class ProviderPortal extends Component {
                                 />
                             </div>
 
+                        </div>
+                        <div className="card place-holder-card">
                         </div>
                         <div className="card transaction-card" id="outbound-request-list">
                             <h2>Outbound</h2>
@@ -272,6 +359,31 @@ class ProviderPortal extends Component {
                                     pageSizeOptions = {[10, 25, 50]}
                                     className = {'-highlight'}
                                     resizable = {false}
+                                    getTdProps={(state, rowInfo) => {
+                                        if(rowInfo !== undefined && rowInfo.row !== undefined){
+
+                                        return {
+                                          onClick: (e, handleOriginal) => {
+                                            this.viewOutboundPatientRequest(rowInfo.row);
+                                     
+                                            if (handleOriginal) {
+                                              handleOriginal();
+                                            }
+                                          }
+                                        };
+                                    } else {
+                                        return {
+                                            onClick: (e, handleOriginal) => {
+                                              if (handleOriginal) {
+                                                handleOriginal();
+                                              }
+                                            }
+                                          };
+
+                                    }
+                                      
+                                    }}
+                                    
                                     getTrProps={(state, rowInfo) => {
                                         if(rowInfo !== undefined && rowInfo.row !== undefined){
                                             var status_color = "white";
@@ -318,6 +430,25 @@ class ProviderPortal extends Component {
                         </div>
 
 
+                    </div>
+                </div>
+                
+                <div id="view-patient-modal" className="modal" style={this.state.show_patient_modal}>
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <div className="modal-header-button" onClick={this.closeViewPatientModal}>
+                                <span className="close close-modal">&times;</span>
+                                <span className="tooltip">Close</span>
+                            </div>
+                        </div>
+                        <h2 id="view-patient-name">Patient Name</h2>
+                        <hr/>
+                        <div className="row modal-row">
+                            <h3 id="view-patient-status">Request Status</h3>
+                        </div>
+                        <div className="row modal-row">
+                            <h3 id="view-patient-date">Date</h3>
+                        </div>
                     </div>
                 </div>
             </div> 
