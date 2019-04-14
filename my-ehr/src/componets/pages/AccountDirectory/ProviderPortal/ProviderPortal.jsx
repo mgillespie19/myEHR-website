@@ -44,18 +44,6 @@ class ProviderPortal extends Component {
     }
 
     componentDidMount(){
-        var kaleido = "http://u0pzrkrob7:OSS_M1ZqX5ioPAE0itBI3K_iMM7QK3n4j0ChloT8PFU@u0cvwu91l1-u0h89jef9w-connect.us0-aws.kaleido.io/replies";
-        //var test = "https://open-ic.epic.com/FHIR/api/FHIR/DSTU2/Patient/Tbt3KuCY0B5PSrJvCu2j-PlK.aiHsu2xUjUM8bWpetXoB";
-        fetch(kaleido)
-        .then(response => console.log(response))
-
-        // fetch(baseUrl + patientSearchString)
-        // .then(response => response.text())
-        // .then(response => proccessPatientData(response))
-        // .then(data => this.setState({ data: data }))
-        .catch(error => console.log(error));
-
-
         var username='u0pzrkrob7';
         var password='OSS_M1ZqX5ioPAE0itBI3K_iMM7QK3n4j0ChloT8PFU';
         var headers = new Headers();        
@@ -66,20 +54,20 @@ class ProviderPortal extends Component {
         .then(response => console.log(response))
         .catch(error => console.log(error));
 
-        console.log("testing kaleido...");
-        // var kaleido = "https://u0cvwu91l1-u0kxk6c93f-connect.us0-aws.kaleido.io/"
-        // var kaleido = "https://u0pzrkrob7:OSS_M1ZqX5ioPAE0itBI3K_iMM7QK3n4j0ChloT8PFU@u0cvwu91l1-u0h89jef9w-connect.us0-aws.kaleido.io/replies";
+
+        // console.log("testing kaleido...");
+        // var kaleido = "http://u0cvwu91l1-u0h89jef9w-connect.us0-aws.kaleido.io/replies"
         // fetch(kaleido, {
         //   method: 'GET',
         //   headers: {
-        //       'Accept': 'application/json',
-        //       'X-Parse-Application-Id': '12122',
-        //       'X-Parse-REST-API-Key': '12121',
+        //       'username': 'u0pzrkrob7',
+        //       'password': 'OSS_M1ZqX5ioPAE0itBI3K_iMM7QK3n4j0ChloT8PFU',
         //       'Content-Type': 'application/json',
         //   },
         //   // data: '{"where":{"uid":"12312312"}}'
     
         // })
+        // .then(response => response.json())
         // .then(response => console.log(response))
         // .catch(error => console.log(error));
 
