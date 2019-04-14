@@ -1,8 +1,5 @@
 import firebase from 'firebase';
 
-
-
-
 const config = {
   apiKey: "AIzaSyATOZyruRd9jZODpv-jICgtl1tUuw4ESWE",
   authDomain: "myehrbeta.firebaseapp.com",

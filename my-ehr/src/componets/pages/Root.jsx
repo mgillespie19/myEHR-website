@@ -7,6 +7,9 @@ import SideDrawer from '../HamburgerMenu/SideDrawer';
 import Backdrop from '../Backdrop/Backdrop';
 import Footer from '../Footer/Footer';
 
+// import Web3Provider from 'react-web3';
+
+
 
 
 class Root extends Component {

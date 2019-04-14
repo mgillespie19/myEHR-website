@@ -4,6 +4,9 @@ import ProviderPortalNavbar from './ProviderPortalNavbar';
 import ReactTable from "react-table";
 import "react-table/react-table.css";
 
+import { web3 } from 'react-web3';
+
+
 //import fire from '../../../../config/fire';
 
 var transaction_count_flag = false;
@@ -41,13 +44,46 @@ class ProviderPortal extends Component {
     }
 
     componentDidMount(){
-        var test = "https://open-ic.epic.com/FHIR/api/FHIR/DSTU2/Patient/Tbt3KuCY0B5PSrJvCu2j-PlK.aiHsu2xUjUM8bWpetXoB";
-        fetch(test)
+        var kaleido = "http://u0pzrkrob7:OSS_M1ZqX5ioPAE0itBI3K_iMM7QK3n4j0ChloT8PFU@u0cvwu91l1-u0h89jef9w-connect.us0-aws.kaleido.io/replies";
+        //var test = "https://open-ic.epic.com/FHIR/api/FHIR/DSTU2/Patient/Tbt3KuCY0B5PSrJvCu2j-PlK.aiHsu2xUjUM8bWpetXoB";
+        fetch(kaleido)
+        .then(response => console.log(response))
+
         // fetch(baseUrl + patientSearchString)
-        .then(response => response.text())
-        .then(response => proccessPatientData(response))
+        // .then(response => response.text())
+        // .then(response => proccessPatientData(response))
         // .then(data => this.setState({ data: data }))
         .catch(error => console.log(error));
+
+
+        var username='u0pzrkrob7';
+        var password='OSS_M1ZqX5ioPAE0itBI3K_iMM7QK3n4j0ChloT8PFU';
+        var headers = new Headers();        
+        headers.append('Authorization', 'Basic ' + btoa(username+ ':' + password));
+        
+        fetch('http://u0cvwu91l1-u0h89jef9w-connect.us0-aws.kaleido.io/replies', {headers: headers})
+        .then(response => response.json())
+        .then(response => console.log(response))
+        .catch(error => console.log(error));
+
+        console.log("testing kaleido...");
+        // var kaleido = "https://u0cvwu91l1-u0kxk6c93f-connect.us0-aws.kaleido.io/"
+        // var kaleido = "https://u0pzrkrob7:OSS_M1ZqX5ioPAE0itBI3K_iMM7QK3n4j0ChloT8PFU@u0cvwu91l1-u0h89jef9w-connect.us0-aws.kaleido.io/replies";
+        // fetch(kaleido, {
+        //   method: 'GET',
+        //   headers: {
+        //       'Accept': 'application/json',
+        //       'X-Parse-Application-Id': '12122',
+        //       'X-Parse-REST-API-Key': '12121',
+        //       'Content-Type': 'application/json',
+        //   },
+        //   // data: '{"where":{"uid":"12312312"}}'
+    
+        // })
+        // .then(response => console.log(response))
+        // .catch(error => console.log(error));
+
+
 
 
 
@@ -61,19 +97,15 @@ class ProviderPortal extends Component {
     
        });
 
-    //    //check if there is a click outside the modal and close it
-    //    window.addEventListener('click', function (event) {
-    //        if(document.getElementById("view-patient-modal").style.display === "block"){
-    //         if(!event.path.includes(document.getElementById("view-patient-modal").firstChild)){
-    //             document.getElementById("view-patient-modal").style.display = "none";
+    
 
-    //         }
-    //        }
-    //    });
        console.log("Mounted");
 
     }
+
+
   
+    
 
     componentWillUpdate(){
         transaction_count_flag = true;
@@ -135,6 +167,11 @@ class ProviderPortal extends Component {
         document.getElementById("view-patient-name").innerHTML = "";
         document.getElementById("view-patient-status").innerHTML = "";
         document.getElementById("view-patient-date").innerHTML = "";
+    }
+    closePatientModalListener = (event) => {
+        if(event.target==document.getElementById("view-patient-modal")){
+            this.closeViewPatientModal();
+        }
     }
     viewPatientModal = (rowInfo) => {
         
@@ -433,7 +470,7 @@ class ProviderPortal extends Component {
                     </div>
                 </div>
                 
-                <div id="view-patient-modal" className="modal" style={this.state.show_patient_modal}>
+                <div id="view-patient-modal" className="modal" style={this.state.show_patient_modal} onClick={(event)=>this.closePatientModalListener(event)}>
                     <div className="modal-content">
                         <div className="modal-header">
                             <div className="modal-header-button" onClick={this.closeViewPatientModal}>
